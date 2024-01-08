@@ -6,7 +6,7 @@
   <mapper namespace="com.smhrd.bello.mapper.MemberMapper">
 
 	<insert id="join" parameterType="com.smhrd.bello.model.SpringMember">
-		insert into user_info values (#{user_id}, md5(#{user_pw}), #{user_name}, now(), "N",#{doorbell_num})
+		insert into user_info values (#{user_id}, md5(#{user_pw}), #{user_name}, now(),#{doorbell_num})
 	</insert>  
   	<!-- 아이디를 인터페이스의 추상메서드와 맞춰주면 알아서 찾아감 -->
   	<select id="login" parameterType="com.smhrd.bello.model.SpringMember"
