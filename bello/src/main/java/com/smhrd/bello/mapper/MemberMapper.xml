@@ -11,7 +11,7 @@
   	<!-- 아이디를 인터페이스의 추상메서드와 맞춰주면 알아서 찾아감 -->
   	<select id="login" parameterType="com.smhrd.bello.model.SpringMember"
   					resultType="com.smhrd.bello.model.SpringMember"> <!-- 리절트타입은 정수형이면 필요없음 -->
-		select * from user_info where user_id=#{user_id} and user_id=#{user_pw}  
+		select * from user_info where user_id=#{user_id} and user_pw=md5(#{user_pw})  
   	</select>
   	
   	<update id="update" parameterType="com.smhrd.bello.model.SpringMember">

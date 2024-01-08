@@ -25,7 +25,7 @@
 						<a href="#menu">로그인</a>
 					</c:when>
 					<c:otherwise>
-						<c:if test="${member.email eq 'admin'}">
+						<c:if test="${member.user_id eq 'admin'}">
 							<a href="select">전체회원정보</a>
 						</c:if>
 						<a href="update">회원정보 수정</a>
@@ -197,7 +197,7 @@
 						<h1>로그인 한 사람의 이메일 출력해주세요</h1>
 					</c:when>
 					<c:otherwise>
-						<h1>${member.email }</h1>
+						<h1>${member.user_id }</h1>
 					
 					</c:otherwise>
 					</c:choose>
@@ -213,7 +213,7 @@
 						<h1>로그인 한사람의 전화번호를 출력해주세요</h1>
 					</c:when>
 					<c:otherwise>
-						<h1>${member.tel }</h1>
+						<h1>${member.user_id }</h1>
 					
 					</c:otherwise>
 					</c:choose>
@@ -229,7 +229,7 @@
 						<h1>로그인 한 사람의 주소를 출력해주세요</h1>
 					</c:when>
 					<c:otherwise>
-						<h1>${member.address }</h1>
+						<h1>${member.user_id }</h1>
 					
 					</c:otherwise>
 					</c:choose>
