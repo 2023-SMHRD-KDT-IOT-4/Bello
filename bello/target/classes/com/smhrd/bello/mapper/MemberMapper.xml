@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.smhrd.bello.mapper.MemberMapper">
+
+	<insert id="join" parameterType="com.smhrd.bello.model.SpringMember">
+		insert into user_info values (#{user_id}, md5(#{user_pw}), #{user_name}, now(), "N",#{doorbell_num})
+	</insert>  
+  	<!-- 아이디를 인터페이스의 추상메서드와 맞춰주면 알아서 찾아감 -->
+  	<select id="login" parameterType="com.smhrd.bello.model.SpringMember"
+  					resultType="com.smhrd.bello.model.SpringMember"> <!-- 리절트타입은 정수형이면 필요없음 -->
+		select * from user_info where user_id=#{user_id} and user_id=#{user_pw}  
+  	</select>
+  	
+  	<update id="update" parameterType="com.smhrd.bello.model.SpringMember">
+		update user_info set pw=#{pw}, doorbell_num=#{doorbell_num} where user_id=#{user_id}
+	</update>
+	<!-- 객체를 여러개 반환해야 할땐느 어차피 알아서 리스트 형태로 자동으로 가므로 안에 들어가는 객체의 변수형들만 고려하면 됨 -->
+	<select id="memberList" resultType="com.smhrd.bello.model.SpringMember"> <!-- 셀럭트는 리절트타입 반드시 필요 -->
+		select * from user_info  
+	</select>
+
+	<!-- 아이디 중복 체크(email아이디로 회원조회) -->
+	  <!-- <select id="idChk" resultType="com.smhrd.bello.model.SpringMember">
+        SELECT * FROM user_info WHERE user_id=#{user_id}
+    </select> -->
+
+  	
+  </mapper>
