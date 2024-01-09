@@ -23,7 +23,7 @@
                 <p>시작하려면 메뉴를 선택해주세요</p>
                 <ul class="actions special">
                     <li><a href="#" class="button scrolly">MESSAGE</a></li>
-                    <li><a href="172.30.1.6:8000" class="button scrolly">VIDEO</a></li>
+                    <li><a href="#" onclick="openExternalURL('http://172.30.1.6:8000')" class="button scrolly">VIDEO</a></li>
                     <li><a href="#" class="button scrolly">SETTING</a></li>
                 </ul>
             </div>
@@ -38,5 +38,10 @@
                 <script src="resources/assets/js/breakpoints.min.js"></script>
                 <script src="resources/assets/js/util.js"></script>
                 <script src="resources/assets/js/main.js"></script>
+   <script>
+            function openExternalURL(url) {
+                window.open(url, '_blank');
+            }
+        </script>
     </body>
 </html>
