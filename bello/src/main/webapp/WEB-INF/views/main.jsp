@@ -19,7 +19,7 @@
                 <a href="member/logout" class="logout">LOGOUT</a>
                 <!-- <span class="icon solid major fa-cloud"></span> -->
                 <span class="icon solid major fa-solid fa-bell"></span>
-                <h1><strong>${member.user_name }</strong> 님 환영합니다.<br /></h1>
+                <h1><strong>${member.user_name }</strong> 님 </h1> <br> <h1>환영합니다.</h1>
                 <p>시작하려면 메뉴를 선택해주세요</p>
                 <ul class="actions special">
                     <li><a href="#" class="button scrolly">MESSAGE</a></li>
