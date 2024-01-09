@@ -22,7 +22,7 @@ public class MainController {
 
 	@RequestMapping(value="/", method= RequestMethod.GET) // 겟방식으로 루트로 요청
 	public String index() {
-		return "index";
+		return "home";
 				
 	}
 	//localhost:8083/myapp/success => joinSuccess.jsp 를 응답(리턴)하는 구조

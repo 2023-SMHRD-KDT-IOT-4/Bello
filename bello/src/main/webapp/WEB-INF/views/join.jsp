@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/assets/css/join.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Join</title>
+</head>
+<body >
+    <div id="header">
+        <div class="inner">
+            <!-- <span class="icon solid major fa-cloud"></span> -->
+            <span class="icon solid major fa-solid fa-bell"></span>
+            <h1>회원가입</h1>
+           
+            <form action="#" method="post">
+                <input type="text" placeholder="아이디를 입력해주세요.">
+                <br>
+                <input type="password" placeholder="비밀번호를 입력해주세요.">
+                <br>
+                <input type="password" placeholder="비밀번호를 다시 입력해주세요.">
+                <br>
+                <input type="text" placeholder="시리얼번호를 입력해주세요.">
+                <br>
+                <input type="submit" value="회원가입" >
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
