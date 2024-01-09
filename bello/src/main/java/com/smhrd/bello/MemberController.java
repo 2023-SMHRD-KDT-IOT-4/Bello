@@ -131,15 +131,15 @@ public class MemberController {
 	    }
 		
 	 @RequestMapping(value="member/checkDuplicateSkey", method=RequestMethod.GET)
-	    public @ResponseBody String checkDuplicateSkey(@RequestParam("product_num") String product_num) {
-	        SpringMember existingSkey = mapper.skChk(product_num);
-	        System.out.println("zz");
+	    public @ResponseBody String checkDuplicateSkey(@RequestParam("doorbell_num") String doorbell_num) {
+	        SpringMember existingSkey = mapper.skChk(doorbell_num);
+	        System.out.println(doorbell_num);
 	        if (existingSkey != null) {
-	            // 중복된 ID가 이미 존재함
-	            return "duplicate";
-	        } else {
-	            // 중복된 ID가 존재하지 않음
+	            // 시리얼키 사용 가능
 	            return "available";
+	        } else {
+	            // 등록되지 않거나 유효하지 않은 시리얼키
+	            return "serialkeyerror";
 	        }
 	    }
 
