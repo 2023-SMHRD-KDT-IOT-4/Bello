@@ -21,9 +21,9 @@
             <form action="member/join.do" method="post">
                 <div class="input-group">
                     <input type="text" id="user_id" name="user_id" placeholder="아이디를 입력해주세요." >
-                    <button class="cbtn" onclick="checkDuplicateId()">아이디<br>중복확인</button>
-                	<div id="emailError"></div>
+                    <button type="button" class="cbtn" onclick="checkDuplicateId()">아이디<br>중복확인</button>
                 </div>
+                	<div id="emailError"></div>
                 <input type="password" name="user_pw" placeholder="비밀번호를 입력해주세요.">
                 <br>
                 <input type="password" placeholder="비밀번호를 다시 입력해주세요.">
@@ -32,9 +32,9 @@
                 <br>
                 <div class="input-group">
                     <input type="text" id="doorbell_num" name="doorbell_num" placeholder="시리얼번호를 입력해주세요.">
-                    <button class="cbtn" onclick="checkDuplicateSkey()">시리얼<br>번호확인</button>
-                	<div id="serialkeyError"></div>
+                    <button type="button" class="cbtn" onclick="checkDuplicateSkey()">시리얼<br>번호확인</button>
                 </div>
+                	<div id="serialkeyError"></div>
                 <br>
                 <input type="submit" value="회원가입" >
             </form>
