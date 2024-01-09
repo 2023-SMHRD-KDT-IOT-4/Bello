@@ -3,15 +3,15 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Message</title>
+		<title>SETTING</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="resources/assets/css/msg2.css" />
+		<link rel="stylesheet" href="resources/assets/css/setting.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<body class="is-preload">
-         <div id="wrap">
+        <div id="wrap">
 
             <!-- Header -->
                 <header id="header">
@@ -24,43 +24,39 @@
                     <div class="pg_nav">
                         <nav>
                             <ul>
+                                <li><a href="" class="menu">MESSAGE</a></li>
                                 <li><a href="" class="menu">VIDEO</a></li>
-                                <li><a href="" class="menu">SETTING</a></li>
                             </ul>
                         </nav>
                     </div>
                 </header>
-                <div class="title"><h1>✉ MESSAGE</h1></div>
+                <div class="title"><h1>⚙ SETTING</h1></div>
                 <div id="wrapper">
 
-                    <div class="msg">
-                        <h2>전송할 메시지를 선택해주세요😀</h2>
-                        <br>
+                    <div class="sound">
+                        <h2>사용하실 벨소리를 선택해주세요🎵</h2>
                         <br>
                         <form action="">
-                            
-                            <!-- <label for="delivery_option" >배송 옵션 선택</label>  -->
-                            
-                            <select id="delivery_option" name="delivery_option">
-                                <option value="" selected>메시지를 선택하세요</option>
-                                <option value="door">문 앞에 두고 가주세요</option>
-                                <option value="dog">강아지가 있어 벨 누르지 말아주세요</option>
-                                <option value="baby">아기가 있어 벨 누르지 말아주세요</option>
-                                <option value="custom_message">직접입력</option>
-                               
-                            </select>
+                            <label class="box-radio-input"><input type="radio" name="sound" value="sound1"  checked> <span>SOUND1</span></label>
                             <br>
-                            
-
-                            <label style="display: none;" id="custom_message_label">
-                                직접입력<br>
-                                <textarea id="custom_message" name="custom_message"  placeholder="배송메모를 입력해주세요"  cols="30" rows="5" maxlength="500"></textarea>
-                            </label>
+                            <label class="box-radio-input"><input type="radio" name="sound" value="sound2"  checked> <span>SOUND2</span></label>
                             <br>
-
-                            <input type="submit" value="Send">
+                            <label class="box-radio-input"><input type="radio" name="sound" value="sound3"  checked> <span>SOUND3</span></label>
+                            <br>
+                            <label class="box-radio-input"><input type="radio" name="sound" value="sound4"  checked> <span>SOUND4</span></label>
+                            <br>
+                            <label class="box-radio-input"><input type="radio" name="sound" value="sound5"  checked> <span>SOUND5</span></label>
+                            <!-- <input type="radio" name="sound" value="sound5"> <span>벨소리5</span> -->
+                            <br>
+                            <br>
+                            <span class="volume_control">음량조절🔈</span><input type="range" min="0" max="100" id="ex-in"><span id="ex-out"></span>
+                            <br>
+                            <br>
+                            <input type="submit" value="변경하기">
                         </form>
                     </div>
+                    
+
                 </div>
     
             <!-- 푸터수정하기! -->
@@ -82,13 +78,20 @@
 
 
 		<!-- Scripts -->
-        		<script src="resources/assets/js/jquery.min.js"></script>
-                <script src="resources/assets/js/jquery.scrolly.min.js"></script>
-                <script src="resources/assets/js/browser.min.js"></script>
-                <script src="resources/assets/js/breakpoints.min.js"></script>
-                <script src="resources/assets/js/util.js"></script>
-                <script src="resources/assets/js/main.js"></script>
-			<!-- 메세지보내기 -->
-        		<script src="resources/assets/js/custom_messaga.js"></script>
+        <script src="resources/assets/js/jquery.min.js"></script>
+        <script src="resources/assets/js/jquery.scrolly.min.js"></script>
+        <script src="resources/assets/js/browser.min.js"></script>
+        <script src="resources/assets/js/breakpoints.min.js"></script>
+        <script src="resources/assets/js/util.js"></script>
+        <script src="resources/assets/js/main.js"></script>
+
+        <script src="resources/assets/js/sound.js"></script>
+        <!-- 음량조절 -->
+        <!-- <script>
+            document.querySelector('#ex-in').addEventListener('input',e=>{
+                document.querySelector('#ex-out').innerHTML= e.target.value;
+            });
+        </script> -->
+        
 	</body>
 </html>
