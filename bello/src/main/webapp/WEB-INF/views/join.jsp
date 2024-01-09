@@ -18,20 +18,23 @@
             <span class="icon solid major fa-solid fa-bell"></span>
             <h1>기기등록 및 회원가입</h1>
            
-            <form action="member/join.do" method="post">
-                <input type="text" id="user_id" name="user_id" placeholder="아이디를 입력해주세요.">
-                <br>
-                <button type="button" onclick="checkDuplicateId()">중복 확인</button></li>
-					    <div id="emailError"></div>
-                <input type="password" name="user_pw" placeholder="비밀번호를 입력해주세요.">
+            <form action="#" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="아이디를 입력해주세요." >
+                    <button class="cbtn">아이디<br>중복확인</button>
+                </div>
+                <input type="password" placeholder="비밀번호를 입력해주세요.">
                 <br>
                 <input type="password" placeholder="비밀번호를 다시 입력해주세요.">
                 <br>
-                <input type="text" id="doorbell_num" name="doorbell_num" placeholder="시리얼번호를 입력해주세요.">
+                <input type="text" placeholder="이름을 입력해주세요.">
                 <br>
-                <button type="button" onclick="checkDuplicateSkey()">시리얼키 확인</button>
-					 <div id="serialkeyError"></div>
-                <input type="submit"  value="회원가입" >
+                <div class="input-group">
+                    <input type="text" placeholder="시리얼번호를 입력해주세요.">
+                    <button class="cbtn">시리얼<br>번호확인</button>
+                </div>
+                <br>
+                <input type="submit" value="회원가입" >
             </form>
 
         </div>
