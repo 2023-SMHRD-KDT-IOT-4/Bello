@@ -60,6 +60,8 @@
 					<li><input type="password" name="user_pw"  placeholder="PW를 입력하세요" ></li>
 					<li><input type="text" name="user_name"  placeholder="닉네임을 입력하세요" ></li>
 					<li><input type="text" name="doorbell_num"  placeholder="씨리얼키를 입력하세요" ></li>
+					<button type="button" onclick="checkDuplicateSkey()">시리얼키 확인</button>
+					 <div id="serialkeyError"></div>
 					<li><input type="submit" value="JoinUs" class="button fit"></li>
 				</form>
 			</ul>
@@ -290,7 +292,34 @@
             }
         });
     }
+    
+    function checkDuplicateSkey() {
+        var product_num = encodeURIComponent($('#product_num').val());
+
+        // AJAX 호출
+        $.ajax({
+            url: 'member/checkDuplicateSkey?product_num=' + product_num,
+            type: 'GET',
+            
+            success: function (checkDuplicateSkey) {
+            	console.log(checkDuplicateSkey);
+
+                if (checkDuplicateSkey == 'duplicate') {
+                    $('#serialkeyError').text('사용할 수 있는 기기입니다.');
+                } else {
+                    $('#serialkeyError').text('유효한 시리얼키를 입력해주세요.');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('AJAX 호출 실패:', status, error);
+                // 서버에서 에러 응답이 오면 콘솔에 상세한 정보 출력
+            }
+        });
+    }   
+    
 </script>
+
+
 	</body>
 </html>
 

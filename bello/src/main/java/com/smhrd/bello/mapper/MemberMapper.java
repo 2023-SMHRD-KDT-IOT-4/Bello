@@ -26,4 +26,6 @@ public interface MemberMapper {
 	@Select("SELECT * FROM user_info WHERE user_id=#{user_id}")//회원가입 중복체크
 	public SpringMember idChk(String user_id);
 	
+	@Select("SELECT * FROM product_info WHERE product_num=#{product_num}")
+	public SpringMember skChk(String product_num);
 }

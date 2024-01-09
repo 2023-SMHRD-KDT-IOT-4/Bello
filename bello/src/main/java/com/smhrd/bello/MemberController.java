@@ -129,6 +129,19 @@ public class MemberController {
 	            return "available";
 	        }
 	    }
+		
+	 @RequestMapping(value="member/checkDuplicateSkey", method=RequestMethod.GET)
+	    public @ResponseBody String checkDuplicateSkey(@RequestParam("product_num") String product_num) {
+	        SpringMember existingSkey = mapper.skChk(product_num);
+	        System.out.println("zz");
+	        if (existingSkey != null) {
+	            // 중복된 ID가 이미 존재함
+	            return "duplicate";
+	        } else {
+	            // 중복된 ID가 존재하지 않음
+	            return "available";
+	        }
+	    }
 
 }
 
