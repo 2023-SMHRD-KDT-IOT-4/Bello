@@ -314,3 +314,15 @@ input::placeholder{
 div{
 	display: block;
 }
+#emailError{
+	color: rgb(5, 7, 133);
+	float: left;
+	margin-left: 30px;
+	font-weight: bold;
+}
+#serialkeyError{
+	color: rgb(5, 7, 133);
+	float: left;
+	margin-left: 30px;
+	font-weight: bold;
+}
