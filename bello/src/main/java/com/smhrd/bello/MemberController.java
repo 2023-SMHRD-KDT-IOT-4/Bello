@@ -31,9 +31,10 @@ public class MemberController {
 		//System.out.println(email+","+pw+","+tel+","+address);
 	
 	SpringMember existingMember = mapper.idChk(user_id);
+	SpringMember existingSkey = mapper.skChk(doorbell_num);
 
-    if (existingMember != null) {
-        // 이미 존재하는 ID로 회원 가입 시도 시, 가입 실패
+    if (existingMember != null && existingSkey != null) {
+        // 이미 존재하는 ID입력하거나, 유효하지 않은 씨리얼키 사용 시, 가입 실패
         return "redirect:/";
     }
 
@@ -59,7 +60,9 @@ public class MemberController {
 	if(res>0) {//회원가입 성공
 		//조인석세스로 
 		//localhost:8083/myapp/success?email=사용자가 입력한 이메일로 클라이언트가 재요청(redirecting) , ?은 키값입력하려고
-		return "redirect:/success?email="+encodedEmail;
+		//return "redirect:/success?email="+encodedEmail;
+        return "redirect:/";
+
 	}else {//회원가입 실패
 		return "redirect:/";
 	}
@@ -77,13 +80,13 @@ public class MemberController {
 		}else {//로그인 성공
 			session.setAttribute("member", result);
 	}
-		return "redirect:/";
+		return "redirect:/main";
 	}
 
 	@RequestMapping(value="/member/logout", method=RequestMethod.GET)
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/logout";
 		
 	}
 

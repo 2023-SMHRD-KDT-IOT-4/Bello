@@ -22,7 +22,7 @@ public class MainController {
 
 	@RequestMapping(value="/", method= RequestMethod.GET) // 겟방식으로 루트로 요청
 	public String index() {
-		return "index";
+		return "home";
 				
 	}
 	//localhost:8083/myapp/success => joinSuccess.jsp 를 응답(리턴)하는 구조
@@ -37,6 +37,26 @@ public class MainController {
 	public String update() {
 		return "update"; //뷰 리졸버를 통해 업데이트로 연결됨
 	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String login() {
+		return "login"; //뷰 리졸버를 통해 로그인 페이지로 연결됨
+	}
+	
+	@RequestMapping(value="/join", method=RequestMethod.GET)
+	public String join() {
+		return "join"; //뷰 리졸버를 통해 회원가입 페이지로 연결됨
+	}
+	
+	@RequestMapping(value="/main", method=RequestMethod.GET)
+	public String main() {
+		return "main"; //뷰 리졸버를 통해 메인 페이지로 연결됨
+	}	
+	
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public String logout() {
+		return "home"; //뷰 리졸버를 통해 로그아웃하면 첫 페이지로 연결됨
+	}	
 	
 	@RequestMapping(value="/select", method=RequestMethod.GET)
 	public String select(Model model) {
