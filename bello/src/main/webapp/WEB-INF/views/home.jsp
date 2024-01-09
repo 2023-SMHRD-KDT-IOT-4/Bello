@@ -22,6 +22,7 @@
                 <ul class="actions special">
                     <li><a href="#" class="button scrolly">Login</a></li>
                     <li><a href="#" class="button scrolly">Join</a></li>
+                   
                 </ul>
             </div>
         </div>
