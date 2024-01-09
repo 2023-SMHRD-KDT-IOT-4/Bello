@@ -23,7 +23,7 @@
                 <p>시작하려면 메뉴를 선택해주세요</p>
                 <ul class="actions special">
                     <li><a href="#" class="button scrolly">MESSAGE</a></li>
-                    <li><a href="#" class="button scrolly">VIDEO</a></li>
+                    <li><a href="172.30.1.6:8000" class="button scrolly">VIDEO</a></li>
                     <li><a href="#" class="button scrolly">SETTING</a></li>
                 </ul>
             </div>
