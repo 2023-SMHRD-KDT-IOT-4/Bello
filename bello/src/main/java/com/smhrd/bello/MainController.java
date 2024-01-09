@@ -47,6 +47,12 @@ public class MainController {
 	public String join() {
 		return "join"; //뷰 리졸버를 통해 회원가입 페이지로 연결됨
 	}
+	
+	@RequestMapping(value="/main", method=RequestMethod.GET)
+	public String main() {
+		return "main"; //뷰 리졸버를 통해 회원가입 페이지로 연결됨
+	}	
+	
 	@RequestMapping(value="/select", method=RequestMethod.GET)
 	public String select(Model model) {
 		
