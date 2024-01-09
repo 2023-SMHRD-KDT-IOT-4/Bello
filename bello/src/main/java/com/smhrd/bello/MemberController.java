@@ -32,11 +32,13 @@ public class MemberController {
 	
 	SpringMember existingMember = mapper.idChk(user_id);
 	SpringMember existingSkey = mapper.skChk(doorbell_num);
+System.out.println(existingSkey);
 
-    if (existingMember != null && existingSkey != null) {
+
+    if (existingMember != null || existingSkey == null) {
         // 이미 존재하는 ID입력하거나, 유효하지 않은 씨리얼키 사용 시, 가입 실패
-        return "redirect:/";
-    }
+        return "redirect:/?joinResult=fail1";
+    } else {
 
     SpringMember member = new SpringMember(user_id, user_pw, user_name, doorbell_num);
 	
@@ -62,12 +64,12 @@ public class MemberController {
 		//localhost:8083/myapp/success?email=사용자가 입력한 이메일로 클라이언트가 재요청(redirecting) , ?은 키값입력하려고
 		//return "redirect:/success?email="+encodedEmail;
 		int resU = mapper.updateUsingYn(member);
-        return "redirect:/";
+        return "redirect:/?joinResult=success";
 
 	}else {//회원가입 실패
-		return "redirect:/";
+		return "redirect:/?joinResult=fail";
 	}
-	
+    }
 	}
 	@RequestMapping(value="/member/login.do", method=RequestMethod.POST)
 	public String login(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw,
