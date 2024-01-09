@@ -38,6 +38,15 @@ public class MainController {
 		return "update"; //뷰 리졸버를 통해 업데이트로 연결됨
 	}
 	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String login() {
+		return "login"; //뷰 리졸버를 통해 로그인 페이지로 연결됨
+	}
+	
+	@RequestMapping(value="/join", method=RequestMethod.GET)
+	public String join() {
+		return "join"; //뷰 리졸버를 통해 회원가입 페이지로 연결됨
+	}
 	@RequestMapping(value="/select", method=RequestMethod.GET)
 	public String select(Model model) {
 		

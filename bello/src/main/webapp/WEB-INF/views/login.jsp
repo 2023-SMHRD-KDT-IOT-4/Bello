@@ -17,7 +17,7 @@
             <span class="icon solid major fa-solid fa-bell"></span>
             <h1>로그인</h1>
            
-            <form action="#" method="post">
+            <form action="member/login.do" method="post">
                 <input type="text" placeholder="아이디를 입력해주세요.">
                 <br>
                 <input type="password" placeholder="비밀번호를 입력해주세요.">
