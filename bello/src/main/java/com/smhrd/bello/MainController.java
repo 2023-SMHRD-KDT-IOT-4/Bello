@@ -53,11 +53,6 @@ public class MainController {
 		return "main"; //뷰 리졸버를 통해 메인 페이지로 연결됨
 	}	
 	
-	@RequestMapping(value="/logout", method=RequestMethod.GET)
-	public String logout() {
-		return "home"; //뷰 리졸버를 통해 로그아웃하면 첫 페이지로 연결됨
-	}	
-	
 	@RequestMapping(value="/select", method=RequestMethod.GET)
 	public String select(Model model) {
 		

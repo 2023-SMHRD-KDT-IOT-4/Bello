@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.smhrd.bello.model.SpringMember;
 
@@ -28,4 +29,7 @@ public interface MemberMapper {
 	
 	@Select("SELECT * FROM product_info WHERE doorbell_num=#{doorbell_num}")
 	public SpringMember skChk(String doorbell_num);
+	
+	@Update("update product_info set using_yn='Y' where doorbell_num=#{doorbell_num}")
+	public int updateUsingYn(SpringMember m);
 }

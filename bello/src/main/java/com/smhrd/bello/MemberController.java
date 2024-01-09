@@ -61,6 +61,7 @@ public class MemberController {
 		//조인석세스로 
 		//localhost:8083/myapp/success?email=사용자가 입력한 이메일로 클라이언트가 재요청(redirecting) , ?은 키값입력하려고
 		//return "redirect:/success?email="+encodedEmail;
+		int resU = mapper.updateUsingYn(member);
         return "redirect:/";
 
 	}else {//회원가입 실패
@@ -77,16 +78,17 @@ public class MemberController {
 
 		if(result==null) {//로그인 실패
 			System.out.println("로그인 실패");
+			return "redirect:/";
 		}else {//로그인 성공
 			session.setAttribute("member", result);
+			return "redirect:/main";
 	}
-		return "redirect:/main";
 	}
 
 	@RequestMapping(value="/member/logout", method=RequestMethod.GET)
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/logout";
+		return "redirect:/";
 		
 	}
 
