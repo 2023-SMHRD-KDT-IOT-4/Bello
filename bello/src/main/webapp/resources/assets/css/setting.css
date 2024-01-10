@@ -1,4 +1,336 @@
+/* jua 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    font-family: 'Jua', sans-serif;
+}
+
+
 html,body,div,h1,p,form,a,span,ul,li {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+html{
+   height: 100%;    
+   line-height: 1.2;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   background-color: #f1f2f6;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+}
+
+#wrap{
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 150px;
+    border: 0.1px solid #e2e2e2;
+    width: 100%;
+    max-width: 480px;
+    min-width: 360px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 15px rgba(200, 203, 222, 0.7);
+}
+/* 헤더영역 */
+header{
+    position: sticky;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    background: #ffffff;
+    z-index: 2000;
+    
+}
+header,footer{
+    display: block;
+}
+.header_wrap{
+    position: relative;
+    width: 100%;
+    height: 68px;
+    padding: 16px 24px;
+    /* background-color: #999; */
+    background-color: #4686a0;
+    color: rgba(255, 255, 255, 0.75);
+    background-attachment: fixed,							fixed,							fixed;
+    background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
+    background-position: top left,						center center,					center center;
+    background-size: auto,							cover,							cover;
+}
+.header_wrap .logout{
+    right: 65px;
+    
+}
+.header_wrap .logout{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 28px;
+    
+    display: inline-block;
+}
+.logo{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* 네비게이션 영역 */
+
+.pg_nav{
+    width: 100%;
+    max-width: 480px;
+    background-color: #4686a0;
+    border-bottom: 1px solid var(--gray-200);
+    overflow: hidden;
+    z-index: 100;
+}
+.pg_nav ul{
+    white-space: nowrap;
+    /* overflow-x: scroll; */
+    padding: 15px 24px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+ul{
+    list-style: none;
+}
+.pg_nav ul li{
+    display: inline-block;
+    margin-right: 24px;
+    
+}
+.menu{
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+}
+/* a 태그 */
+a{
+    text-decoration: none;
+    color: white;
+
+}
+a:hover{
+    color: #5bdbf1;
+
+}
+.logout{
+   color: white; 
+    font-size: 25px;
+    font-weight: bold;
+}
+nav{
+    float: right;
+}
+
+/*  title  */
+ .title{
+    font-size: large;
+    margin-top: 3em;
+ }
+
+
+
+
+
+
+/*  msg 영역 */
+
+#wrapper{
+    display: flex;
+    justify-content: center; /*가로 정렬*/
+    align-items: center; /*세로 정렬*/
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    /* background-color: rgb(238, 238, 208); */
+}
+
+.msg{
+    border: 2px solid #4686a0;
+    text-align: center;
+    border-radius: 4px;
+    height: 450px ;
+    
+}
+h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+label[for="delivery_option"]{
+
+    text-align: left !important;
+    margin-bottom: 2em;
+
+}
+
+/* textarea */
+textarea{
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -.3px;
+    overflow: auto;
+    display: block;
+    width: calc(100% - 26px);
+    height: 120px !important; /* 강제로 높이값 적용 */
+    padding: 9px 13px;
+    border: solid #dcdee0;
+    border-width: 1px 0 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #18181a;
+    resize: none; /*textarea 사이즈 조절 x */
+    border:  #3893b8 2px solid;
+    border-radius: 4px;
+
+    
+}
+#custom_message{
+    width: 100%;
+    height: 100%;
+}
+
+/* form 태그 영역 */
+
+form {
+    margin: 2em 0.5em 1em 0.5em;
+    /* border: 1px solid rgb(211, 108, 108); */
+
+}
+
+/*파이어폭스 화살표 업애기 - -moz-appearance*/
+/*크롬 화살표 없애기 - -webkit-appearance */
+select{
+    /* -moz-appearance: none;  */
+    /* -webkit-appearance: none;  */
+    /* -ms-appearance: none;  */
+    /* appearance: none; */
+    background: rgba(144, 144, 144, 0.075);
+    border-radius: 4px;
+    border: none;
+    border: solid 2px  #6bd4c8;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 100%;
+    /* width: 100%; */
+    text-align: center;
+    font-size: 1.2em
+
+}
+select::-ms-expand{
+    display: none;
+}
+
+select:invalid{
+    box-shadow: none;
+}
+
+select:focus{
+    border-color:rgba(144, 144, 144, 0.5);
+}
+
+select{
+    height: 2.75em;
+    background: url('');    
+}
+
+/* submit 버튼 */
+
+input[type="submit"]{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
+    color: #555 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0.125em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+input[type="submit"]:hover{
+    background-color: rgba(131, 130, 130, 0.075);
+    border: 2px solid #6bd4c8;
+}
+
+input[type="submit"]:active{
+    background-color: rgba(144, 144, 144, 0.2);
+}
+
+
+
+/* 푸터 바닥 고정 */
+footer{
+    height: 150px;
+    /* position: relative; */
+    /* transform: translateY(-100%); */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background-color: beige; */
+    background-color: #4686a0;
+    color: rgba(255, 255, 255, 0.75);
+    background-attachment: fixed,							fixed,							fixed;
+    background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
+    background-position: top left,						center center,					center center;
+    background-size: auto,							cover,							cover;
+    text-align: center;
+    
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.copyright{
+    padding: 75px;
+}
+
+/* video 부분 */
+html,body,div,p,form,a,span,ul,li {
     padding: 0;
     margin: 0;
     outline: 0;
