@@ -86,7 +86,7 @@ System.out.println(existingSkey);
 			return "redirect:/";
 		}else {//로그인 성공
 			session.setAttribute("member", result);
-			session.setAttribute("doorbell_num", sessionDoorbellnum);
+			session.setAttribute("user_id",user_id);
 			return "redirect:/main";
 	}
 	}
