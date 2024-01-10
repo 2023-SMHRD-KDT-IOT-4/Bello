@@ -75,7 +75,10 @@ System.out.println(existingSkey);
 	public String login(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw,
 			HttpSession session) { //로그인되는 순간 세션객체 생성
 		System.out.println(user_id+","+user_pw);
-		SpringMember member = new SpringMember(user_id, user_pw);
+		String doorbell_num = null;
+		String sessionDoorbellnum = mapper.sessionDoorbellNum(user_id);
+		System.out.println(sessionDoorbellnum);
+		SpringMember member = new SpringMember(user_id, user_pw, sessionDoorbellnum);
 		SpringMember result= mapper.login(member);
 
 		if(result==null) {//로그인 실패
@@ -83,6 +86,7 @@ System.out.println(existingSkey);
 			return "redirect:/";
 		}else {//로그인 성공
 			session.setAttribute("member", result);
+			session.setAttribute("doorbell_num", sessionDoorbellnum);
 			return "redirect:/main";
 	}
 	}

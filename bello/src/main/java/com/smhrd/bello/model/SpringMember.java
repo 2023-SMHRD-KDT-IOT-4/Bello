@@ -17,9 +17,10 @@ public class SpringMember {
 	private String doorbell_num;
 	
 	
-	public SpringMember(String user_id, String user_pw) {
+	public SpringMember(String user_id, String user_pw, String doorbell_num) {
 		this.user_id=user_id;
 		this.user_pw = user_pw;
+		this.doorbell_num=doorbell_num;
 	}
 	public SpringMember(String user_id) {
 		this.user_id=user_id;
