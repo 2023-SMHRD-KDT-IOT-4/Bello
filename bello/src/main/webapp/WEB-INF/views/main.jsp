@@ -29,10 +29,9 @@
 			<h1>환영합니다.</h1>
 			<p>시작하려면 메뉴를 선택해주세요</p>
 			<ul class="actions special">
-				<li><a onclick="sendDbn_mes('http://')" class="button scrolly">MESSAGE</a></li>
-				<li><a onclick="openExternalURL('http://172.30.1.6:8000')"
-					class="button scrolly">VIDEO</a></li>
-				<li><a onclick="sendDbn_set('http://')" class="button scrolly">SETTING</a></li>
+				<li><a onclick="sendDbn_mes('http://172.30.1.6:8002/setting/message')" class="button scrolly">MESSAGE</a></li>
+                    <li><a onclick="videoStream('http://172.30.1.6:8000')" class="button scrolly">VIDEO</a></li>
+                    <li><a onclick="sendDbn_set('http://172.30.1.6:8002/setting')" class="button scrolly">SETTING</a></li>
 			</ul>
 		</div>
 	</div>
