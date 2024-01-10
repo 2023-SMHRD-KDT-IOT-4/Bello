@@ -99,7 +99,7 @@ System.out.println(existingSkey);
 	}
 
 	@RequestMapping(value="/member/update.do", method=RequestMethod.POST)
-	public String update(@ModelAttribute SpringMember member, HttpSession session){  //모델어트리뷰트 : 한번에 묶을수 있는 어노테이션
+	public String update(@ModelAttribute SpringMember member,@RequestParam("user_id") String user_id, HttpSession session){  //모델어트리뷰트 : 한번에 묶을수 있는 어노테이션
 		//@ModelAttribute => 기본생성자 + setter 둘다 사용하므로 필드 이름과 모델이름 반드시 일치시켜줘야함
 		
 		//이메일 안묶이는거 받는법
@@ -114,6 +114,7 @@ System.out.println(existingSkey);
 		
 		if(res>0) {
 			session.setAttribute("member", member);
+			session.setAttribute("user_id", user_id);
 			return "redirect:/"; 
 		} else {
 			return "redirect:/update";

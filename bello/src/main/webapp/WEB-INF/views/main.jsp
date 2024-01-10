@@ -29,9 +29,13 @@
 			<h1>환영합니다.</h1>
 			<p>시작하려면 메뉴를 선택해주세요</p>
 			<ul class="actions special">
-				<li><a onclick="sendDbn_mes('http://172.30.1.6:8002/setting/message')" class="button scrolly">MESSAGE</a></li>
-                    <li><a onclick="videoStream('http://172.30.1.6:8000')" class="button scrolly">VIDEO</a></li>
-                    <li><a onclick="sendDbn_set('http://172.30.1.6:8002/setting')" class="button scrolly">SETTING</a></li>
+				<li><a
+					onclick="sendDbn_mes('http://172.30.1.6:8002/setting/message')"
+					class="button scrolly">MESSAGE</a></li>
+				<li><a onclick="videoStream('http://172.30.1.6:8000')"
+					class="button scrolly">VIDEO</a></li>
+				<li><a onclick="sendDbn_set('http://172.30.1.6:8002/setting')"
+					class="button scrolly">SETTING</a></li>
 			</ul>
 		</div>
 	</div>
@@ -44,18 +48,16 @@
 	<script src="resources/assets/js/util.js"></script>
 	<script src="resources/assets/js/main.js"></script>
 	<script>
-   var doorbell_num = encodeURIComponent('<%=session.getAttribute("doorbell_num")%>
+   var user_id = encodeURIComponent('<%=session.getAttribute("user_id")%>
 		');
 		function sendDbn_mes(url) {
-			console.log(doorbell_num)
-			openExternalURL(url + '?doorbell_num='
-					+ encodeURIComponent(doorbell_num));
+			console.log(user_id)
+			openExternalURL(url + '?user_id=' + encodeURIComponent(user_id));
 
 		}
 		function sendDbn_set(url) {
-			console.log(doorbell_num);
-			openExternalURL(url + '?doorbell_num='
-					+ encodeURIComponent(doorbell_num));
+			console.log(user_id);
+			openExternalURL(url + '?user_id=' + encodeURIComponent(user_id));
 		}
 		function openExternalURL(url) {
 			window.location.href = url;
@@ -64,5 +66,6 @@
 			window.open(url, '_blank');
 		}
 	</script>
+
 </body>
 </html>
