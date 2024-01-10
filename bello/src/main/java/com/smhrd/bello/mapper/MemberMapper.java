@@ -32,4 +32,7 @@ public interface MemberMapper {
 	
 	@Update("update product_info set using_yn='Y' where doorbell_num=#{doorbell_num}")
 	public int updateUsingYn(SpringMember m);
+	
+	@Select("SELECT doorbell_num from user_info WHERE user_id=#{user_id}")
+	public String sessionDoorbellNum(String doorbell_num);
 }
