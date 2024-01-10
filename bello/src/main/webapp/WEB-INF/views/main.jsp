@@ -48,8 +48,8 @@
 	<script src="resources/assets/js/util.js"></script>
 	<script src="resources/assets/js/main.js"></script>
 	<script>
-   var user_id = encodeURIComponent('<%=session.getAttribute("user_id")%>;
-		');
+	var user_id = encodeURIComponent('<%= session.getAttribute("user_id") %>');
+		
 		function sendDbn_mes(url) {
 			console.log(user_id);
 			openExternalURL(url + '?user_id=' + encodeURIComponent(user_id));
