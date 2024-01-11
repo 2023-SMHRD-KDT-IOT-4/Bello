@@ -1,9 +1,9 @@
 /* jua 폰트*/
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 *{
-    font-family: 'Jua', sans-serif;
+    font-family: 'Jua', sans-serif !important;
+    letter-spacing: 1px ;
 }
-
 
 html, body, div, span, h1, p, ol, ul, li {
 	margin: 0;
@@ -424,7 +424,6 @@ div{
 #logout:hover{
 	color: #4fa49a !important;
 }
-
 a.button.scrolly{
 	width: 190px;
 }

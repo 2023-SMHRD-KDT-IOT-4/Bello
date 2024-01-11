@@ -1,10 +1,12 @@
+
+
 /* jua 폰트*/
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-*{
-    font-family: 'Jua', sans-serif;
+
+body,form,input,select,textarea{
+    font-family: 'Jua', sans-serif !important;
+    letter-spacing: 1px ;
 }
-
-
 
 html,body,div,h1,p,form,a,span,ul,li {
     padding: 0;
@@ -151,11 +153,6 @@ nav{
     margin-top: 3em;
  }
 
-
-
-
-
-
 /*  msg 영역 */
 
 #wrapper{
@@ -173,6 +170,7 @@ nav{
     text-align: center;
     border-radius: 4px;
     height: 450px ;
+    width: 80%;
     
 }
 h2{
