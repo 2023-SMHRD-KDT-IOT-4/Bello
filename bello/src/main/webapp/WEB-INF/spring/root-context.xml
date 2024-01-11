@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
-	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
-		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-	<!-- 1.HikariCP 빈(=자바 객체) 등록 : 어떤 DB사용할건지 (driver, url, username, password)-->
-	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
-		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<property name="jdbcUrl" value="jdbc:mysql://project-db-campus.smhrd.com:3307/campus_23K_SG4_hack_3?serverTimezone=UTC&amp;characterEncoding=UTF-8"/>
-		<property name="username" value="campus_23K_SG4_hack_3"/>
-		<property name="password" value="smhrd3"/>
-		
-	</bean>	
-	<!-- 2. DataSource :  Spring 통해서 MySQL에 접근 -->
-	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
-		<constructor-arg ref="hikariConfig" />	
-	</bean>
-	<!-- 3.MyBatis -->
-	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"/>
-		<!-- mybatis-config.xml => mybatis를 활용하기 위한 옵션 -->
-		<!--<property name="configLocation" value="classpath:/com/smhrd/bello/config/mybatis-config.xml"/>  -->
-	</bean>
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<mybatis-spring:scan base-package="com.smhrd.bello.mapper" />	<!-- 바로 사용 불가하며 네임스페이스 들어가서 체크 해줘야 사용 가능 -->
-		
+    <!-- Root Context: defines shared resources visible to all other web components -->
+    <!-- 1.HikariCP 빈(=자바 객체) 등록 : 어떤 DB사용할건지 (driver, url, username, password)-->
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://project-db-campus.smhrd.com:3307/campus_23K_SG4_hack_3?serverTimezone=UTC&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="campus_23K_SG4_hack_3"/>
+        <property name="password" value="smhrd3"/>
+    </bean>
+    <!-- 2. DataSource :  Spring 통해서 MySQL에 접근 -->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg ref="hikariConfig" />
+    </bean>
+    <!-- 3.MyBatis -->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- mybatis-config.xml => mybatis를 활용하기 위한 옵션 -->
+        <!--<property name="configLocation" value="classpath:/com/smhrd/bello/config/mybatis-config.xml"/>  -->
+    </bean>
+
+    <!-- WebSocket 설정 -->
+    <context:component-scan base-package="com.smhrd.bello.websocket" />
+    
+
+    <mybatis-spring:scan base-package="com.smhrd.bello.mapper" /> <!-- 바로 사용 불가하며 네임스페이스 들어가서 체크 해줘야 사용 가능 -->
+
 </beans>
-
-

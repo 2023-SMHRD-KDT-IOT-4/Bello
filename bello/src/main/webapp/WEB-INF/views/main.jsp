@@ -65,6 +65,32 @@
 		function videoStream(url) {
 			window.open(url, '_blank');
 		}
+		   var socket = new WebSocket('ws://localhost:8080/ws'); // WebSocket 서버의 주소로 변경
+
+	        // 연결이 열린 경우
+	        socket.addEventListener('open', function (event) {
+	            console.log('WebSocket 연결이 열렸습니다.');
+	            
+	            // 메시지 전송 예제
+	            var message = '안녕하세요, WebSocket 서버!';
+	            socket.send(message);
+	            console.log('보낸 메시지:', message);
+	        });
+
+	        // 메시지 수신 시
+	        socket.addEventListener('message', function (event) {
+	            console.log('서버에서 받은 메시지:', event.data);
+	        });
+
+	        // 연결이 닫힌 경우
+	        socket.addEventListener('close', function (event) {
+	            console.log('WebSocket 연결이 닫혔습니다.');
+	        });
+
+	        // 에러 발생 시
+	        socket.addEventListener('error', function (event) {
+	            console.error('WebSocket 에러:', event);
+	        });
 	</script>
 
 </body>
