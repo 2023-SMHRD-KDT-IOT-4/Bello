@@ -39,16 +39,11 @@
 			</ul>
 		</div>
 	</div>
-	Websocket Server URL :
-	<input type="text" id="serverUrl"
+	<input type = "hidden" type="text" id="serverUrl"
 		value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws"
 		style="width: 400px">
-	<br> NickName :
-	<input type="text" id="nickname">
-	<input type="button" id="enterBtn" value="Enter">
-	<input type="button" id="exitBtn" value="Exit">
-
-	<h1>Chatting Area</h1>
+	<br>
+	<input type="hidden" type="button" id="enterBtn" value="Enter">	
 	<div id="chatArea">
 		<div id="chatMessageArea"></div>
 	</div>
@@ -86,7 +81,7 @@
 		function connect() {
 			wsocket = new WebSocket("ws://localhost:8083/ex-Websocket/chat-ws");
 			var serverUrl = $("#serverUrl").val();
-			alert("Call Websocket URL : "+serverUrl);
+			alert("서버에 접속되었습니다.");
 			
 			
 			wsocket.onopen = onOpen;
@@ -111,7 +106,7 @@
 		}
 		
 		function send() {
-			var nickname = $("#nickname").val();
+			var nickname = "Host";
 			var msg = $("#message").val();
 			wsocket.send("msg:"+nickname+":" + msg);
 			$("#message").val("");
@@ -135,6 +130,7 @@
 			$('#sendBtn').click(function() { send(); });
 			$('#enterBtn').click(function() { connect(); });
 			$('#exitBtn').click(function() { disconnect(); });
+			connect();
 		});
 	</script>
 
