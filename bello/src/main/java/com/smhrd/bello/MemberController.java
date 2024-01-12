@@ -98,29 +98,7 @@ System.out.println(existingSkey);
 		
 	}
 
-	@RequestMapping(value="/member/update.do", method=RequestMethod.POST)
-	public String update(@ModelAttribute SpringMember member,@RequestParam("user_id") String user_id, HttpSession session){  //모델어트리뷰트 : 한번에 묶을수 있는 어노테이션
-		//@ModelAttribute => 기본생성자 + setter 둘다 사용하므로 필드 이름과 모델이름 반드시 일치시켜줘야함
-		
-		//이메일 안묶이는거 받는법
-		//1. 세션 안에서 가져오기
-		SpringMember loginMember = (SpringMember)session.getAttribute("member");
-		String email = loginMember.getUser_id();
-		
-		member.setUser_id(email);
-		//2. input tag 활용 - update jsp에서 히든이나 리드온리
-		
-		int res = mapper.update(member);  //sql에서 정수를 반환받으니까 int
-		
-		if(res>0) {
-			session.setAttribute("member", member);
-			session.setAttribute("user_id", user_id);
-			return "redirect:/"; 
-		} else {
-			return "redirect:/update";
-		}
-				
-	}
+	
 	@RequestMapping(value="member/delete.do/{user_id}", method=RequestMethod.GET)//계속 실어져서 오는 데이터가 중가로 안에 실리고 실리는 데이터 키값 넣어주면됨 
 	   public String delete(@PathVariable("user_id") String user_id) { //a태그는 무조건 겟방식으로 넘어온다고 생각하면 됨 // 경로에 실리는 경우 pathvariable 사용
 	      System.out.println(user_id);
