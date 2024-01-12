@@ -62,12 +62,11 @@ public class MainController {
 		return "select";
 		}
 
-	@RequestMapping(value="/chat-ws", method=RequestMethod.GET)
-	public String chat() {
-		return "chat-ws";
+
+	@RequestMapping(value="/LCD", method=RequestMethod.GET)
+	public String lcd() {
+		return "LCD";
 	}
-	
-	
 	
 
 }

@@ -43,7 +43,7 @@
             <div class="chat-container">
                  <!-- Websocket Server URL :  -->
                  <input type="hidden" id="serverUrl"
-                 value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws"
+                 value="ws://localhost:8083/bello/main"
                  style="width: 400px">
                   
                  
@@ -97,7 +97,7 @@
 			wsocket = new WebSocket("ws://localhost:8083/ex-Websocket/chat-ws");
 			var serverUrl = $("#serverUrl").val();
 			alert("서버에 접속되었습니다.");
-
+			
 			wsocket.onopen = onOpen;
 			wsocket.onmessage = onMessage;
 			wsocket.onclose = onClose;
@@ -119,20 +119,25 @@
 			appendMessage("Websocket Closed !!!");
 		}
 
-		function send() {
+		function send() {	
 			var nickname = "Host";
 			var msg = $("#message").val();
 			wsocket.send("msg:" + nickname + ":" + msg);
 			$("#message").val("");
 		}
 
-		function appendMessage(msg) {
-			$("#chatMessageArea").append(msg + "<br>");
-			var chatAreaHeight = $("#chatArea").height();
-			var maxScroll = $("#chatMessageArea").height() - chatAreaHeight;
-			$("#chatArea").scrollTop(maxScroll);
-		}
-
+//		 function appendMessage(msg) {
+//			$("#chatMessageArea").append(msg + "<br>");
+//			var chatAreaHeight = $("#chatArea").height();
+//			var maxScroll = $("#chatMessageArea").height() - chatAreaHeight;
+//			$("#chatArea").scrollTop(maxScroll);
+//		}
+		 function appendMessage(msg) {
+	            $('#chatMessageArea').append('<p>' + msg + '</p>');
+	            var chatAreaHeight = $('#chatArea').height();
+	            var maxScroll = $('#chatMessageArea').height() - chatAreaHeight;
+	            $('#chatArea').scrollTop(maxScroll);
+	        }
 		$(document).ready(function() {
 			$('#message').keypress(function(event) {
 				var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -151,7 +156,9 @@
 				disconnect();
 			});
 			connect();
+			
 		});
+		
 	</script>
 
 </body>
