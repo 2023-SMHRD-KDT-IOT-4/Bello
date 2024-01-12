@@ -1,0 +1,577 @@
+/* jua 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+body{
+    font-family: 'Jua', sans-serif !important;
+    letter-spacing: 1px ;
+}
+
+html,body,div,h1,p,form,a,span,ul,li {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+html{
+ height: 100%;    
+ line-height: 1.2;
+ -ms-text-size-adjust: 100%;
+ -moz-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100%;
+ background-color: #f1f2f6;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;   
+}
+
+#wrap{
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 150px;
+  border: 0.1px solid #e2e2e2;
+  width: 100%;
+  max-width: 480px;
+  min-width: 360px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 15px rgba(200, 203, 222, 0.7);
+}
+/* 헤더영역 */
+header{
+  position: sticky;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  background: #ffffff;
+  z-index: 2000;
+  
+}
+header,footer{
+  display: block;
+}
+.header_wrap{
+  position: relative;
+  width: 100%;
+  height: 68px;
+  padding: 16px 24px;
+  /* background-color: #999; */
+  background-color: #4686a0;
+  color: rgba(255, 255, 255, 0.75);
+  background-attachment: fixed,							fixed,							fixed;
+  background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
+  background-position: top left,						center center,					center center;
+  background-size: auto,							cover,							cover;
+}
+.header_wrap .logout{
+  right: 65px;
+  
+}
+.header_wrap .logout{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 28px;
+  
+  display: inline-block;
+}
+.logo{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* 네비게이션 영역 */
+
+.pg_nav{
+  width: 100%;
+  max-width: 480px;
+  background-color: #4686a0;
+  border-bottom: 1px solid var(--gray-200);
+  overflow: hidden;
+  z-index: 100;
+}
+.pg_nav ul{
+  white-space: nowrap;
+  /* overflow-x: scroll; */
+  padding: 15px 24px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+ul{
+  list-style: none;
+}
+.pg_nav ul li{
+  display: inline-block;
+  margin-right: 24px;
+  
+}
+.menu{
+  color: white;
+  font-weight: bold;
+  font-size: 120%;
+}
+/* a 태그 */
+a{
+  text-decoration: none;
+  color: white;
+
+}
+a:hover{
+  color: #5bdbf1;
+
+}
+.logout{
+ color: white; 
+  font-size: 25px;
+  font-weight: bold;
+}
+nav{
+  float: right;
+}
+
+/*  title  */
+.title{
+  font-size: large;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+
+/*  msg 영역 */
+
+#wrapper{
+  display: flex;
+  justify-content: center; /*가로 정렬*/
+  align-items: center; /*세로 정렬*/
+  text-align: center;
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(238, 238, 208); */
+}
+
+.msg{
+  border: 2px solid #4686a0;
+  text-align: center;
+  border-radius: 4px;
+  height: 100% ;
+  width: 90%;
+}
+
+
+label[for="delivery_option"]{
+
+  text-align: left !important;
+  margin-bottom: 2em;
+
+}
+
+/* textarea */
+textarea{
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -.3px;
+  overflow: auto;
+  display: block;
+  width: calc(100% - 26px);
+  height: 120px !important; /* 강제로 높이값 적용 */
+  padding: 9px 13px;
+  border: solid #dcdee0;
+  border-width: 1px 0 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #18181a;
+  resize: none; /*textarea 사이즈 조절 x */
+  border:  #3893b8 2px solid;
+  border-radius: 4px;
+
+  
+}
+#custom_message{
+  width: 100%;
+  height: 100%;
+}
+
+/* form 태그 영역 */
+
+form {
+  margin: 2em 0.5em 1em 0.5em;
+  /* border: 1px solid rgb(211, 108, 108); */
+
+}
+
+/*파이어폭스 화살표 업애기 - -moz-appearance*/
+/*크롬 화살표 없애기 - -webkit-appearance */
+select{
+  /* -moz-appearance: none;  */
+  /* -webkit-appearance: none;  */
+  /* -ms-appearance: none;  */
+  /* appearance: none; */
+  background: rgba(144, 144, 144, 0.075);
+  border-radius: 4px;
+  border: none;
+  border: solid 2px  #6bd4c8;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+  /* width: 100%; */
+  text-align: center;
+  font-size: 1.2em
+
+}
+select::-ms-expand{
+  display: none;
+}
+
+select:invalid{
+  box-shadow: none;
+}
+
+select:focus{
+  border-color:rgba(144, 144, 144, 0.5);
+}
+
+select{
+  height: 2.75em;
+  background: url('');    
+}
+
+
+
+
+/* 푸터 바닥 고정 */
+footer{
+  height: 150px;
+  /* position: relative; */
+  /* transform: translateY(-100%); */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* background-color: beige; */
+  background-color: #4686a0;
+  color: rgba(255, 255, 255, 0.75);
+  background-attachment: fixed,							fixed,							fixed;
+  background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
+  background-position: top left,						center center,					center center;
+  background-size: auto,							cover,							cover;
+  text-align: center;
+  
+}
+
+h1{
+  text-align: center;
+}
+
+.copyright{
+  padding: 75px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* 비디오 목록  */
+h1 {
+  font-size: 40px;
+}
+
+
+
+table {
+  width: 100%;
+  border-top: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th {
+  /* background-color: lightblue; */
+  background-color: #4686a0;
+  border-top: 3px solid lightcyan;
+  font-size: 25px;
+  
+}
+
+
+th,
+td {
+  border-bottom: 1px solid #1a66c3;
+  padding: 10px;
+  color: #050119;
+  
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+  font-size: 20px;
+}
+
+
+a.video{
+  color: darkblue;
+  text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+a.video:hover{
+  color :#f32de3;
+}
+
+/* 비디오테이블 버튼, 5개씩 정렬 및 페이지 이동 */
+ /* 버튼 스타일 추가 */
+ .center button {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color:white;
+  font-size: 20px;
+  /* background: #ADD8E6; */
+  background: #4686a0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+ }
+  /* hover style 추가 */
+  .center button:hover {
+    background: #1b90df;
+    color: white;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+
+
+.videoList {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.videoList th, .videoList td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+/* 스트리밍 버튼  */
+
+#streamBtnWrap {
+  text-align: center; 
+  width: 100%; 
+  padding: 20px;
+  
+}
+
+/* 
+.streamBtn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color:#757575;
+  font-size: 24px;
+  background: #ADD8E6;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  padding: 15px 30px;
+ } */
+
+
+ /* 모달  */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+}
+.close {
+  color: red;
+  float: right;
+  font-size: 50px !important;
+  font-weight: bold;
+  z-index: 3;
+  margin-top: 150px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+ /* 동영상 모달  */
+
+ .board {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.board th, .board td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.board th {
+  background-color: #f2f2f2;
+}
+
+.video{
+  font-size: large;
+}
+.video-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#videoPlayer {
+  width: 100%; /* 동영상 플레이어를 모달 내에 가득 채우도록 설정 */
+  /* height: 100%;  */
+  /* 가로 너비에 따라 자동으로 높이 조절 */
+  /* 가로 너비에 따라 자동으로 높이 조절 */
+}
+hr{
+  width: 95% ;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* 스트리밍 버튼 */
+a[class*="btn"] {
+  text-decoration: none;
+}
+
+button[class*="btn"] {
+  border: 0;
+}
+/* .btn-3d {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  padding: 20px 60px;
+  color: white;
+  
+  border-radius: 6px;
+  text-align: center;
+  transition: top .01s linear;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+.btn-3d.blue:hover   {
+  background-color: #699DD1;
+}
+.btn-3d:active {
+  top: 9px;
+}
+.btn-3d.blue {
+  background-color: #6DA2D9;
+  box-shadow: 0 0 0 1px #6698cb inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 8px 0 0 rgba(110, 164, 219, .7),
+        0 8px 0 1px rgba(0,0,0,.4),
+        0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.blue:active {
+  box-shadow: 0 0 0 1px #6191C2 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+} */
+
+/* 수정 */
+
+
+.streamBtn {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  padding: 20px 60px;
+  color: white;
+  /* margin: 20px 10px 10px; */
+  border-radius: 6px;
+  text-align: center;
+  transition: top .01s linear;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  border: none;
+}
+.streamBtn:hover   {
+  background-color: #699DD1;
+}
+.streamBtn:active {
+  top: 9px;
+}
+.streamBtn{
+  background-color: #6DA2D9;
+  box-shadow: 0 0 0 1px #6698cb inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 8px 0 0 rgba(110, 164, 219, .7),
+        0 8px 0 1px rgba(0,0,0,.4),
+        0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.streamBtn:active {
+  box-shadow: 0 0 0 1px #6191C2 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+button{
+  font-family: 'Jua', sans-serif !important;
+}
