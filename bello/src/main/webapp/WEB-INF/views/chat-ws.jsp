@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ page contentType="text/html; charset=UTF-8"
+	trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +7,12 @@
 <title>Websockeet Chatting</title>
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
+
+
 	var wsocket;
 	
 	function connect() {
-		wsocket = new WebSocket("ws://172.30.1.22:8083/chat-ws");
+		wsocket = new WebSocket("ws://localhost:8083/ex-Websocket/chat-ws");
 		var serverUrl = $("#serverUrl").val();
 		alert("Call Websocket URL : "+serverUrl);
 		
@@ -18,6 +21,7 @@
 		wsocket.onmessage = onMessage;
 		wsocket.onclose = onClose;
 	}
+	
 	function disconnect() {
 		wsocket.close();
 	}
@@ -63,21 +67,29 @@
 </script>
 <style>
 #chatArea {
-	width: 200px; height: 100px; overflow-y: auto; border: 1px solid black;
+	width: 200px;
+	height: 100px; overflow-y : auto;
+	border: 1px solid black;
+	overflow-y: auto;
 }
 </style>
 </head>
 <body>
-	Websocket Server URL : <input type="text" id="serverUrl" value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws" style="width:400px"><br>
-
-	NickName : <input type="text" id="nickname">
+	Websocket Server URL :
+	<input type="text" id="serverUrl"
+		value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws"
+		style="width: 400px">
+	<br> NickName :
+	<input type="text" id="nickname">
 	<input type="button" id="enterBtn" value="Enter">
 	<input type="button" id="exitBtn" value="Exit">
-    
-    <h1>Chatting Area</h1>
-    <div id="chatArea"><div id="chatMessageArea"></div></div>
-    <br/>
-    <input type="text" id="message">
-    <input type="button" id="sendBtn" value="Send Message">
+
+	<h1>Chatting Area</h1>
+	<div id="chatArea">
+		<div id="chatMessageArea"></div>
+	</div>
+	<br />
+	<input type="text" id="message">
+	<input type="button" id="sendBtn" value="Send Message">
 </body>
 </html>

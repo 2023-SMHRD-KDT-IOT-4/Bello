@@ -51,5 +51,7 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
 	private void log(String logmsg) {
 		LOGGER.info(new Date() + " : " + logmsg);
 	}
+	
+	
+	}
 
-}
