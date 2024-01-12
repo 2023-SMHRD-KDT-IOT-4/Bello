@@ -65,7 +65,7 @@
 		function videoStream(url) {
 			window.open(url, '_blank');
 		}
-		   var socket = new WebSocket('ws://localhost:8080/ws'); // WebSocket 서버의 주소로 변경
+		   var socket = new WebSocket('ws://172.30.1.22:8083/ws'); // WebSocket 서버의 주소로 변경
 
 	        // 연결이 열린 경우
 	        socket.addEventListener('open', function (event) {
