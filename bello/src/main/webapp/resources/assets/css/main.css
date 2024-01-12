@@ -459,6 +459,7 @@ fieldset{
    height: 100px;
    overflow-y: auto !important;
    
+   text-align : left;
 }
 .chatwrap{
    width: 90%;
