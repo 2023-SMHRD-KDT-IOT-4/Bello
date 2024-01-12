@@ -39,6 +39,22 @@
 			</ul>
 		</div>
 	</div>
+	Websocket Server URL :
+	<input type="text" id="serverUrl"
+		value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws"
+		style="width: 400px">
+	<br> NickName :
+	<input type="text" id="nickname">
+	<input type="button" id="enterBtn" value="Enter">
+	<input type="button" id="exitBtn" value="Exit">
+
+	<h1>Chatting Area</h1>
+	<div id="chatArea">
+		<div id="chatMessageArea"></div>
+	</div>
+	<br />
+	<input type="text" id="message">
+	<input type="button" id="sendBtn" value="Send Message">
 	<footer> </footer>
 	<!-- Scripts -->
 	<script src="resources/assets/js/jquery.min.js"></script>
@@ -65,32 +81,61 @@
 		function videoStream(url) {
 			window.open(url, '_blank');
 		}
-		   var socket = new WebSocket('ws://172.30.1.22:8083/ws'); // WebSocket 서버의 주소로 변경
+		var wsocket;
+		
+		function connect() {
+			wsocket = new WebSocket("ws://localhost:8083/ex-Websocket/chat-ws");
+			var serverUrl = $("#serverUrl").val();
+			alert("Call Websocket URL : "+serverUrl);
+			
+			
+			wsocket.onopen = onOpen;
+			wsocket.onmessage = onMessage;
+			wsocket.onclose = onClose;
+		}
+		
+		function disconnect() {
+			wsocket.close();
+		}
+		function onOpen(evt) {
+			appendMessage("Connected~!");
+		}
+		function onMessage(evt) {
+			var data = evt.data;
+			if (data.substring(0, 4) == "msg:") {
+				appendMessage(data.substring(4));
+			}
+		}
+		function onClose(evt) {
+			appendMessage("Websocket Closed !!!");
+		}
+		
+		function send() {
+			var nickname = $("#nickname").val();
+			var msg = $("#message").val();
+			wsocket.send("msg:"+nickname+":" + msg);
+			$("#message").val("");
+		}
 
-	        // 연결이 열린 경우
-	        socket.addEventListener('open', function (event) {
-	            console.log('WebSocket 연결이 열렸습니다.');
-	            
-	            // 메시지 전송 예제
-	            var message = '안녕하세요, WebSocket 서버!';
-	            socket.send(message);
-	            console.log('보낸 메시지:', message);
-	        });
+		function appendMessage(msg) {
+			$("#chatMessageArea").append(msg+"<br>");
+			var chatAreaHeight = $("#chatArea").height();
+			var maxScroll = $("#chatMessageArea").height() - chatAreaHeight;
+			$("#chatArea").scrollTop(maxScroll);
+		}
 
-	        // 메시지 수신 시
-	        socket.addEventListener('message', function (event) {
-	            console.log('서버에서 받은 메시지:', event.data);
-	        });
-
-	        // 연결이 닫힌 경우
-	        socket.addEventListener('close', function (event) {
-	            console.log('WebSocket 연결이 닫혔습니다.');
-	        });
-
-	        // 에러 발생 시
-	        socket.addEventListener('error', function (event) {
-	            console.error('WebSocket 에러:', event);
-	        });
+		$(document).ready(function() {
+			$('#message').keypress(function(event){
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if(keycode == '13'){
+					send();	
+				}
+				event.stopPropagation();
+			});
+			$('#sendBtn').click(function() { send(); });
+			$('#enterBtn').click(function() { connect(); });
+			$('#exitBtn').click(function() { disconnect(); });
+		});
 	</script>
 
 </body>
