@@ -37,19 +37,34 @@
 				<li><a onclick="sendDbn_set('http://172.30.1.6:8002/setting')"
 					class="button scrolly">SETTING</a></li>
 			</ul>
+			
+			<fieldset class="chatwrap">
+            <legend>chat</legend>
+            <div class="chat-container">
+                 <!-- Websocket Server URL :  -->
+                 <input type="hidden" id="serverUrl"
+                 value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws"
+                 style="width: 400px">
+                  
+                 
+                 
+                 <input type="hidden" type="button" id="enterBtn" value="Enter">
+                 <input type="hidden" id="exitBtn" value="Exit">
+                 <fieldset>
+                     <legend><h2>Chatting Area</h2></legend>
+                     <div id="chatArea">
+                       <div id="chatMessageArea"></div>
+                     </div>
+                 </fieldset>
+                 <br />
+                 <input type="text" id="message">
+                 <input type="button" id="sendBtn" value="Send Message">
+            </div>
+         </fieldset>
+				
 		</div>
 	</div>
-	<input type = "hidden" type="text" id="serverUrl"
-		value="ws://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/chat-ws"
-		style="width: 400px">
-	<br>
-	<input type="hidden" type="button" id="enterBtn" value="Enter">	
-	<div id="chatArea">
-		<div id="chatMessageArea"></div>
-	</div>
-	<br />
-	<input type="text" id="message">
-	<input type="button" id="sendBtn" value="Send Message">
+
 	<footer> </footer>
 	<!-- Scripts -->
 	<script src="resources/assets/js/jquery.min.js"></script>
@@ -59,8 +74,8 @@
 	<script src="resources/assets/js/util.js"></script>
 	<script src="resources/assets/js/main.js"></script>
 	<script>
-	var user_id = encodeURIComponent('<%= session.getAttribute("user_id") %>');
-		
+	var user_id = encodeURIComponent('<%=session.getAttribute("user_id")%>');
+
 		function sendDbn_mes(url) {
 			console.log(user_id);
 			openExternalURL(url + '?user_id=' + encodeURIComponent(user_id));
@@ -77,18 +92,17 @@
 			window.open(url, '_blank');
 		}
 		var wsocket;
-		
+
 		function connect() {
 			wsocket = new WebSocket("ws://localhost:8083/ex-Websocket/chat-ws");
 			var serverUrl = $("#serverUrl").val();
 			alert("서버에 접속되었습니다.");
-			
-			
+
 			wsocket.onopen = onOpen;
 			wsocket.onmessage = onMessage;
 			wsocket.onclose = onClose;
 		}
-		
+
 		function disconnect() {
 			wsocket.close();
 		}
@@ -104,32 +118,38 @@
 		function onClose(evt) {
 			appendMessage("Websocket Closed !!!");
 		}
-		
+
 		function send() {
 			var nickname = "Host";
 			var msg = $("#message").val();
-			wsocket.send("msg:"+nickname+":" + msg);
+			wsocket.send("msg:" + nickname + ":" + msg);
 			$("#message").val("");
 		}
 
 		function appendMessage(msg) {
-			$("#chatMessageArea").append(msg+"<br>");
+			$("#chatMessageArea").append(msg + "<br>");
 			var chatAreaHeight = $("#chatArea").height();
 			var maxScroll = $("#chatMessageArea").height() - chatAreaHeight;
 			$("#chatArea").scrollTop(maxScroll);
 		}
 
 		$(document).ready(function() {
-			$('#message').keypress(function(event){
+			$('#message').keypress(function(event) {
 				var keycode = (event.keyCode ? event.keyCode : event.which);
-				if(keycode == '13'){
-					send();	
+				if (keycode == '13') {
+					send();
 				}
 				event.stopPropagation();
 			});
-			$('#sendBtn').click(function() { send(); });
-			$('#enterBtn').click(function() { connect(); });
-			$('#exitBtn').click(function() { disconnect(); });
+			$('#sendBtn').click(function() {
+				send();
+			});
+			$('#enterBtn').click(function() {
+				connect();
+			});
+			$('#exitBtn').click(function() {
+				disconnect();
+			});
 			connect();
 		});
 	</script>
