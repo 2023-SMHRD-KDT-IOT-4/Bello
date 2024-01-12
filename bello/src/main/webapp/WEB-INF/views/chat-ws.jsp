@@ -9,11 +9,11 @@
 	var wsocket;
 	
 	function connect() {
-		//wsocket = new WebSocket("ws://localhost:9000/chat-ws");
+		wsocket = new WebSocket("ws://172.30.1.22:8083/chat-ws");
 		var serverUrl = $("#serverUrl").val();
 		alert("Call Websocket URL : "+serverUrl);
 		
-		wsocket = new WebSocket(serverUrl);
+		
 		wsocket.onopen = onOpen;
 		wsocket.onmessage = onMessage;
 		wsocket.onclose = onClose;
