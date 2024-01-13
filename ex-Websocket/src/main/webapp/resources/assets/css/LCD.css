@@ -1,3 +1,13 @@
+/* jua 폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    font-family: 'Jua', sans-serif;
+    
+}
+.homemsg{
+  letter-spacing: 3px !important;
+}
+
 html{
     width: 100%;
     
@@ -14,13 +24,13 @@ html{
 }
 
 .wrapper {
-    background-color:	#282828 ;
+    background-color:   #282828 ;
     height: 800px;
    
    }
 .bellcontainer {
     /* padding-top: 1em; */
-    margin-top: 1em;
+    /* margin-top: 1em; */
     border-top: solid 1px  #CCC;
     height: 250px;
 }  
@@ -74,9 +84,10 @@ i{
   margin-right: 10px;
   border-radius: 10px;
   background-color: #CCC;
+  
  }
 .homemsg{
-  font-size:1.8em;
+  font-size:2em;
   text-align: center;
   font-weight:bold;
 }  
@@ -96,11 +107,11 @@ i{
 }
 li{
   border: 1px solid black;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   border-radius: 10px;
   margin-right: 5px;
   list-style-type: "\2709"; /*list 마커 유니코드*/
-  box-shadow: 0px 5px 5px 0px black;
+  /* box-shadow: 0px 5px 5px 0px black; */
   color: black;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -118,14 +129,72 @@ a:link{
 a:visited.a:active{
   color : black;
 }
+
+
+/* 메세지 보내는 부분 */
 .sendmsg>p{
-  font-size: 0.9em;
-}
-.sendmsg>p{
-  height: 20px;
+  font-size: 1em;
+  height: 10px;
  margin-top: 5px;
  font-weight: bold;
 }
+
+/* 메세지 영역 */
 div.sendmsg{
-  height: 400px;
+  height: 380px;
+}
+li {
+  box-shadow: 0px 3px 0px 0px #424242;
+}
+li:active {
+  box-shadow: 0px 0px 0px 0px #ccc;
+  background-color: #999898;
+}
+
+/* chatarea */
+.chatarea{
+  text-align: center;
+  overflow-y: autol;
+  font-size: 50px;
+  
+}
+#chatMessageArea>p{
+  line-height: 1;
+  margin: 0;
+}
+
+
+#sendBtn ,#enterBtn{
+   background-color: transparent;
+   border: 1px solid white;
+   border-radius: 4px;
+}
+#chatArea{
+   height: 115px !important;
+   overflow-y: auto;
+   text-align: left ;
+   padding-bottom:-50px;
+}
+
+#chatArea{
+  
+  border-radius: 10px;
+  
+}
+#chatMessageArea{
+	padding-bottom: -150px;
+}
+#sendBtn:hover{
+   background-color: #4443433b;
+}
+#enterBtn:hover{
+   background-color: #4443433b;
+}
+
+
+button{
+  background-color: transparent;
+  border:none;
+  font-size: 1em;
+  width: 100%;
 }

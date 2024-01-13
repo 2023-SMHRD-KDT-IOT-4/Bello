@@ -33,7 +33,7 @@
 					onclick="sendDbn_mes('http://172.30.1.6:8002/setting/message')"
 					class="button scrolly">MESSAGE</a></li>
 				<li><a onclick="videoStream('http://172.30.1.6:8000')"
-					class="button scrolly">VIDEO</a></li>
+					class="button scrolly">STREAMING</a></li>
 				<li><a onclick="sendDbn_set('http://172.30.1.6:8002/setting')"
 					class="button scrolly">SETTING</a></li>
 			</ul>
@@ -42,9 +42,7 @@
             <legend>chat</legend>
             <div class="chat-container">
                  <!-- Websocket Server URL :  -->
-                 <input type="hidden" id="serverUrl"
-                 value="ws://localhost:8083/bello/main"
-                 style="width: 400px">
+                 <input type="hidden" type="text" id="serverUrl" value="ws://172.30.1.22:8083/ex-Websocket/chat-ws" style="width: 400px">
                   
                  
                  
@@ -91,75 +89,62 @@
 		function videoStream(url) {
 			window.open(url, '_blank');
 		}
-		var wsocket;
-
-		function connect() {
-			wsocket = new WebSocket("ws://localhost:8083/ex-Websocket/chat-ws");
-			var serverUrl = $("#serverUrl").val();
-			alert("서버에 접속되었습니다.");
-			
-			wsocket.onopen = onOpen;
-			wsocket.onmessage = onMessage;
-			wsocket.onclose = onClose;
-		}
-
-		function disconnect() {
-			wsocket.close();
-		}
-		function onOpen(evt) {
-			appendMessage("Connected~!");
-		}
-		function onMessage(evt) {
-			var data = evt.data;
-			if (data.substring(0, 4) == "msg:") {
-				appendMessage(data.substring(4));
-			}
-		}
-		function onClose(evt) {
-			appendMessage("Websocket Closed !!!");
-		}
-
-		function send() {	
-			var nickname = "Host";
-			var msg = $("#message").val();
-			wsocket.send("msg:" + nickname + ":" + msg);
-			$("#message").val("");
-		}
-
-//		 function appendMessage(msg) {
-//			$("#chatMessageArea").append(msg + "<br>");
-//			var chatAreaHeight = $("#chatArea").height();
-//			var maxScroll = $("#chatMessageArea").height() - chatAreaHeight;
-//			$("#chatArea").scrollTop(maxScroll);
-//		}
-		 function appendMessage(msg) {
-	            $('#chatMessageArea').append('<p>' + msg + '</p>');
-	            var chatAreaHeight = $('#chatArea').height();
-	            var maxScroll = $('#chatMessageArea').height() - chatAreaHeight;
-	            $('#chatArea').scrollTop(maxScroll);
-	        }
-		$(document).ready(function() {
-			$('#message').keypress(function(event) {
-				var keycode = (event.keyCode ? event.keyCode : event.which);
-				if (keycode == '13') {
-					send();
-				}
-				event.stopPropagation();
-			});
-			$('#sendBtn').click(function() {
-				send();
-			});
-			$('#enterBtn').click(function() {
-				connect();
-			});
-			$('#exitBtn').click(function() {
-				disconnect();
-			});
-			connect();
-			
-		});
 		
-	</script>
+		 function displayMessage(message) {
+             $('#chatMessageArea').append('<p>' + message + '</p>');
+         }
 
+	     $(document).ready(function () {
+	                let socket;
+	                // WebSocket 연결을 생성합니다.
+	                // Enter 버튼 클릭 시 WebSocket 연결
+	                 $(document).ready(function () {
+	                    socket = new WebSocket($('#serverUrl').val());
+
+	                    // 연결이 열릴 때 실행되는 이벤트 핸들러
+	                    socket.addEventListener('open', (event) => {
+	                        console.log('WebSocket 연결이 열렸습니다.');
+	                        socket.send('Connected.');
+	                    });
+
+	                    // 메시지를 받았을 때 실행되는 이벤트 핸들러
+	                    socket.addEventListener('message', (event) => {
+	                        console.log('서버로부터 메시지를 받았습니다:', event.data);
+	                        // 이곳에서 받은 메시지를 처리할 수 있습니다.
+	                        displayMessage(event.data);
+	                    });
+
+	                    // 연결이 닫힐 때 실행되는 이벤트 핸들러
+	                    socket.addEventListener('close', (event) => {
+	                        console.log('WebSocket 연결이 닫혔습니다.');
+	                    });
+
+	                    // 에러가 발생했을 때 실행되는 이벤트 핸들러
+	                    socket.addEventListener('error', (event) => {
+	                        console.error('WebSocket 에러가 발생했습니다:', event);
+	                    });
+	                   
+	                });
+
+	                // Exit 버튼 클릭 시 WebSocket 연결 종료
+	                $('#exitBtn').click(function () {
+	                    if (socket) {
+	                        socket.close();
+	                    }
+	                });
+
+	                // Send 버튼 클릭 시 메시지 전송
+	                $('#sendBtn').click(function () {
+	                    if (socket && socket.readyState === WebSocket.OPEN) {
+	                        const message = $('#message').val();
+	                        
+	                        socket.send("Host : "+message);
+	                        $('#message').val(''); // 메시지 전송 후 입력창 초기화
+	                    }
+	              })
+
+	      });
+	          
+	       </script>
 </body>
 </html>
