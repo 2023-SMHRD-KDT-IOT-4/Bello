@@ -1,0 +1,10 @@
+span::before{
+    /* font-family: "Font Awesome 5 "; */
+    /* content : "\f0f3";  */
+    /* font-family: "FontAwesome"; */
+    /* content :"\f0f3"; */
+    /* font: var(--fa-font-solid); */
+    /* font-weight: 900; */
+    color: rgb(212, 97, 97);
+
+}

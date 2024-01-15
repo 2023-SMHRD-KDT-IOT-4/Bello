@@ -1,0 +1,112 @@
+<!--setting.html-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SETTING</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/css/setting.css" />
+		<noscript><link rel="stylesheet" href="/static/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body class="is-preload">
+        <div id="wrap">
+
+            <!-- Header -->
+                <header id="header">
+                   
+                    <div class="header_wrap">
+                        <a href="http://172.30.1.22:8084/bello/main"><span class="icon solid major fa-solid fa-bell fa-2x "></span>
+                        <span class="logo">BELLO</span></a>
+                    </div>
+                    <div class="pg_nav">
+                        <nav>
+                            <ul>
+                                <li><a href="http://172.30.1.6:8002/setting/video" class="menu">VIDEO</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                <div class="title"><h1>⚙ SETTING</h1></div>
+                <div id="wrapper">
+
+                    <div class="sound">
+                        <h2>사용하실 벨소리를 선택해주세요🎵</h2>
+                        <br>
+                        <form action="{{ url_for('update_volume') }}" method="post" id="volumeForm">
+							<!-- 기타 폼 엘리먼트들 -->
+							<span class="volume_control">음량조절🔈</span>
+							<input type="range" min="0" max="100" id="ex-in" oninput="updateVolumeDisplay()">
+							<span id="ex-out">50</span>
+							<input type="hidden" name="sound_level" id="volumeInput" value="50">
+                            <br>
+                            <br>
+                            <label class="box-radio-input">
+                                <input type="radio" name="sound_path" value="/static/bgm/berdi.mp3" onclick="setSoundPath('/static/bgm/berdi.mp3')"> <span>SOUND1</span>
+                            </label>
+                            <br>
+                            <label class="box-radio-input">
+                                <input type="radio" name="sound_path" value="/static/bgm/forchild.mp3" onclick="setSoundPath('/static/bgm/forchild.mp3')"> <span>SOUND2</span>
+                            </label>
+                            <br>
+                            <label class="box-radio-input">
+                                <input type="radio" name="sound_path" value="/static/bgm/possum.mp3" onclick="setSoundPath('/static/bgm/possum.mp3')"> <span>SOUND3</span>
+                            </label>
+                            <br>
+                            <br>
+                            <input type="submit" value="변경하기">
+						</form>
+                    </div>
+                    
+
+                </div>
+    
+            <!-- 푸터수정하기! -->
+            <!-- Footer -->
+                <footer id="footer">
+                    <!-- <ul class="icons">
+                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                    </ul> -->
+                    <ul class="copyright">
+                        <li>&copy; Untitled</li>
+                        <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+                    </ul>
+                </footer>
+        </div>
+
+
+		<!-- Scripts -->
+		<script>
+			function updateVolumeDisplay() {
+				var volumeInput = document.getElementById("volumeForm").elements["sound_level"];
+				var volumeOutput = document.getElementById("ex-out");
+				var volumeValue = document.getElementById("ex-in").value;
+		
+				volumeInput.value = volumeValue;
+				volumeOutput.innerHTML = volumeValue;
+			}
+            function setSoundPath(path) {
+                document.getElementById("volumeForm").elements["sound_path"] = path;
+            }
+		</script>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/jquery.scrolly.min.js"></script>
+        <script src="/static/js/browser.min.js"></script>
+        <script src="/static/js/breakpoints.min.js"></script>
+        <script src="/static/js/util.js"></script>
+        <script src="/static/js/main.js"></script>
+
+        <script src="/static/js/sound.js"></script>
+        <!-- 음량조절 -->
+        <!-- <script>
+            document.querySelector('#ex-in').addEventListener('input',e=>{
+                document.querySelector('#ex-out').innerHTML= e.target.value;
+            });
+        </script> -->
+        
+	</body>
+</html>

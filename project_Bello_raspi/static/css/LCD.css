@@ -1,0 +1,148 @@
+/* jua */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    font-family: 'Jua', sans-serif;
+}
+
+.homemsg{
+  letter-spacing: 3px !important;
+}
+
+html{
+    width: 100%;
+    
+  }
+  body{
+    max-width: 480px;
+    max-height: 800px;
+    width: 100%;
+    height: 800px;
+    background: #ececec;
+    /* overflow-y: scroll; */
+    
+    
+}
+
+.wrapper {
+    background-color:	#282828 ;
+    height: 800px;
+   
+   }
+.bellcontainer {
+    /* padding-top: 1em; */
+    margin-top: 1em;
+    border-top: solid 1px  #CCC;
+    height: 250px;
+}  
+.btnLightBlue {
+    background: #5DC8CD;
+  }
+.btnLightBlue.btnPush {
+    box-shadow: 0px 10px 0px 0px #1E8185;
+}
+.btnPush:active {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    background-color: #008C8C;
+  }
+  .btnLightBlue.btnPush:active{
+    box-shadow: 0px 0px 0px 0px #1E8185;
+  }  
+span{
+    color: white;
+}
+.bellcontainer{
+    /* width: 460px; */
+    /* height: 200px; */
+    margin: 0 auto;
+    /* padding: 2em; */
+}  
+a.button {
+    display: block;
+    position: relative;
+    float: left;
+    width: 460px;
+   height: 250px;
+    padding: 0;
+    margin: 10px 10px 10px 10px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #FFF;
+    border-radius: 20px;
+    transition: all 0.2s ;
+  }
+i{
+    margin-top: 0.3em;
+    
+}  
+  /*msg  영역  */
+ .msgcontainer{
+  border: 1px solid #CCC;
+  margin-top: 6%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #CCC;
+ }
+.homemsg{
+  font-size:2em;
+  text-align: center;
+  font-weight:bold;
+}  
+/* 전송메세지 */
+.sendmsg{
+  
+  border: 1px solid #CCC;
+  margin-top: 2%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 2em;
+  text-align: center;
+  height: 415px;
+  background-color: #CCC;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+li{
+  border: 1px solid black;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  margin-right: 5px;
+  list-style-type: "\2709"; /*list 마커 유니코드*/
+  /* box-shadow: 0px 5px 5px 0px black; */
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* a태그 설정 */
+a:active{
+  box-shadow: 0px 0px 0px 0px #ccc;
+}
+.sendmsg > a{
+  color: black !important ;
+}
+a:link{
+  text-decoration: none;
+}
+a:visited.a:active{
+  color : black;
+}
+.sendmsg>p{
+  font-size: 0.9em;
+}
+.sendmsg>p{
+  height: 20px;
+ margin-top: 5px;
+ font-weight: bold;
+}
+div.sendmsg{
+  height: 400px;
+}
+li {
+  box-shadow: 0px 3px 0px 0px #424242;
+}
+li:active {
+  box-shadow: 0px 0px 0px 0px #ccc;
+  background-color: #999898;
+}
