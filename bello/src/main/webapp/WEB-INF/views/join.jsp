@@ -46,13 +46,11 @@
     function checkDuplicateId() {
         var user_id = encodeURIComponent($('#user_id').val());
 
-        // AJAX 호출
         $.ajax({
             url: 'member/checkDuplicateId?user_id=' + user_id,
             type: 'GET',
             
             success: function (checkDuplicateId) {
-            	console.log(checkDuplicateId);
 
                 if (checkDuplicateId == 'duplicate') {
                     $('#emailError').text('이미 사용 중인 이메일입니다.');
@@ -62,7 +60,6 @@
             },
             error: function (xhr, status, error) {
                 console.error('AJAX 호출 실패:', status, error);
-                // 서버에서 에러 응답이 오면 콘솔에 상세한 정보 출력
             }
         });
     }

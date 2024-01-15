@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
 		        <script>
-		    // JSP 페이지 상단에 JavaScript 코드를 추가
 		    $(document).ready(function () {
 		        var joinResult = '<%= request.getParameter("joinResult") %>'; // joinResult 파라미터 값 받기
 		
@@ -30,7 +29,7 @@
 				</script>   
         <title>BELLO HOME</title>
     </head>
-    <body class="is-preload"> <!-- 로드될 때 화면 움직이고 싶을 때 is-preload -->
+    <body class="is-preload"> 
         <div id="header">
             <div class="inner">
                 <!-- <span class="icon solid major fa-cloud"></span> -->

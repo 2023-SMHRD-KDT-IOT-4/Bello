@@ -22,10 +22,6 @@
 		select * from user_info  
 	</select>
 
-	<!-- 아이디 중복 체크(email아이디로 회원조회) -->
-	  <!-- <select id="idChk" resultType="com.smhrd.bello.model.SpringMember">
-        SELECT * FROM user_info WHERE user_id=#{user_id}
-    </select> -->
 
   	
   </mapper>
