@@ -17,7 +17,7 @@ public class WsConfig implements WebSocketConfigurer {
 
 	@Override
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-		//registry.addHandler(echoHandler(), "/echo-ws");
+		
 		registry.addHandler(chatHandler(), "/chat-ws").setAllowedOrigins("*");
 	}
 
