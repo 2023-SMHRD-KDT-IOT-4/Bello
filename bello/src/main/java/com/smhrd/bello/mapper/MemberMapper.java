@@ -11,9 +11,8 @@ import com.smhrd.bello.model.SpringMember;
 @Mapper
 public interface MemberMapper {
 
-	//회원가입
 	public int join(SpringMember m) ;
-	//로그인
+	
 	public SpringMember login(SpringMember m);
 
 	@Select("SELECT * FROM user_info WHERE user_id=#{user_id}")//회원가입 중복체크
