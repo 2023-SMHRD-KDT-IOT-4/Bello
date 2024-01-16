@@ -204,7 +204,6 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
   <summary><b>IoT측면 발전 방향 설명 펼치기</b></summary>
     <div markdown="1">
 	![IoT측면 발전방향을 보려면 클릭하세요](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/c69940d0-27fc-4989-b0c1-42ee012d7eda)
-
     </div>
 </details>
 
