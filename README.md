@@ -77,16 +77,20 @@ https://youtu.be/67ULc5qw4nA
 
 ## 6. 발전방향
 ![발전방향](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/d3517f22-aeac-46d4-b8f1-1acfe6399939)
+<hr>
 
-## 6. 트러블 슈팅
+### 6.1. ~측면 ~발전
+
+
+## 7. 트러블 슈팅
 ![트러블슈팅](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/49870111-fc74-471a-9cfb-1d0311092092)
 <hr>
 
-### 6.1. Frontend
+### 7.1. Frontend
 ...
-### 6.2. Backend
+### 7.2. Backend
 ...
-### 6.3. IoT
+### 7.3. IoT
 ...
-## 6. 회고 / 느낀점
+## 8. 회고 / 느낀점
 >프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
