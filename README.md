@@ -179,12 +179,12 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 <details>
   <summary><b>백엔드 트러블슈팅</b></summary>
     <div markdown="1">
-      - 당초 개발환경을 통일하기 위해 Visual Studio를 사용하여 환경을 구축
-      - Maven 방법으로 만들기 위하여 Eclipse를 사용하여 다시 구축
-      - 알림을 받아오는 핵심 기능을 구현하기 위하여 다시 Spring으로 환경을 구축
-      - Spring 환경을 구축 후에도 알림을 받아올 방법을 고심하면서 Boot를 연동해서 시도
-     (배우지 못했던 부분이라 톰캣 서버가 자주 망가짐)
-      - WebSoket이라는 방법을 통하여 구현
+      - 당초 개발환경을 통일하기 위해 Visual Studio를 사용하여 환경을 구축<br>
+      - Maven 방법으로 만들기 위하여 Eclipse를 사용하여 다시 구축<br>
+      - 알림을 받아오는 핵심 기능을 구현하기 위하여 다시 Spring으로 환경을 구축<br>
+      - Spring 환경을 구축 후에도 알림을 받아올 방법을 고심하면서 Boot를 연동해서 시도<br>
+     (배우지 못했던 부분이라 톰캣 서버가 자주 망가짐)<br>
+      - WebSoket이라는 방법을 통하여 구현<br>
       > 개발 시작시 필요한 도구와 목표를 100% 이해하지 못하여 환경을 구축하는 데에 시간을 크게 할애하여 기능을 더 구현하지 못한 부분에 대해서 아쉽게 생각한다.
     </div>
 </details>
