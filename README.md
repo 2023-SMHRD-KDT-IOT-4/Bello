@@ -138,16 +138,15 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
    - 버튼 클릭 이벤트 핸들링 (기능은 있지만 HTML에서 hidden속성 적용하여 일반적 상황에서 사용불가):<br>
     Exit 버튼 >>>> 클릭 시 WebSocket 연결을 종료합니다.<br>
     Send 버튼 >>>> 클릭 시 입력된 메시지를 서버로 전송하며, 입력 창을 초기화합니다.<br><br>
-
     - displayMessage 함수 (== HTML 버튼과 연결하여 실질적으로 메시지 send하는 함수):<br>
     jQuery를 사용하여 #chatMessageArea라는 HTML 요소를 선택하고, 해당 요소에 <p> 태그로 감싼 새로운 메시지를 추가함.<br>
     함수 호출을 통해 받은 메시지가 페이지에 동적으로 표시됨.<br><br>
 
-  ### written by 전호성
+                                                                                               - written by 전호성 
     
     
   
-</details>
+</details><br><br><br>
 ### 5.3. 스트리밍 기능
 ![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
 
