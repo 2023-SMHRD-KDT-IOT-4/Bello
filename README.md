@@ -42,16 +42,22 @@
 ## 3. 설계과정
 
 ### 3-1. 서비스 흐름도
+
 ![서비스흐름도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a58e8a40-a25a-4a09-84be-6d3cc4fdd4ab)
+
 <details>
   <summary><b>EER 다이어그램 설명 펼치기</b></summary>
     <div markdown="1">
-	![서비스흐름도_txt](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a63cfb24-934f-488c-a8d3-dd685b119242)
+	![서비스흐름도 설명을 보려면 클릭하세요](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a63cfb24-934f-488c-a8d3-dd685b119242)
     </div>
 </details>
+
 ### 3-2. 유스케이스 다이어그램
+
 ![유스케이스](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/75a1250d-3351-4504-a283-d0852edc94f4)
+
 ### 3-3. ER 다이어그램
+
 ![ER](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1a55b668-e57e-4b7e-822d-f950fd0c8bcf)
 <details>
   <summary><b>EER 다이어그램 설명 펼치기</b></summary>
