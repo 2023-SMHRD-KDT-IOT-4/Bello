@@ -1,5 +1,5 @@
 # web_server.py
-
+# /home/bello/project_env/bin/python /home/bello/project_test/web_server.py
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_mysqldb import MySQL
 from flask_cors import CORS
