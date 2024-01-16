@@ -55,15 +55,6 @@ class VideoStream:
     def release(self):
         self.video_writer.release()
         self.delete_old_files()
-
-    def delete_old_files(self):
-        #files = [f for f in os.listdir() if f.startswith("video_") and f.endswith(".avi")]
-        #files.sort(key=lambda x: int(x.split('_')[1].split('.')[0]), reverse=True)
-        #num_files_to_delete = max(0, len(files) - self.max_files)
-        #for i in range(num_files_to_delete):
-        #    file_to_delete = files[i]
-        #    os.remove(file_to_delete)
-        pass
     
 class AudioStream:
     def __init__(self, device_index=2):
@@ -97,23 +88,11 @@ class StreamingOutput(io.BufferedIOBase):
         self.frame = None
         self.condition = Condition()
         #self.video_stream = VideoStream()
-        # self.ws_server = WebSocketServer('172.30.1.6', 8001)  # WebSocketServer 추가
 
     def write(self, buf):
         with self.condition:
             self.frame = buf
             self.condition.notify_all()
-            # Save the frame to video
-            #frame_array = np.frombuffer(buf, dtype=np.uint8)
-            #frame = cv2.imdecode(frame_array, cv2.IMREAD_COLOR)
-            #self.video_stream.write_frame(frame)
-            # Send the frame to WebSocket clients
-            # asyncio.run(self.ws_server.send_message(buf))
-            
-    def release(self):
-        # Uncomment the following line to release the video writer
-        #self.video_stream.release()
-        pass
         
 
 class StreamingHandler(server.BaseHTTPRequestHandler):
@@ -156,10 +135,6 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
             self.send_header('Content-Type', 'audio/wav')
             self.end_headers()
 
-            # audio_stream = AudioStream()
-            # wf = create_audio_file()
-            #save_audio = False  # WAV 파일에 저장할지 여부를 결정하는 플래그
-
             try:
                 pass
 
@@ -168,7 +143,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
                     'Removed audio streaming client %s: %s',
                     self.client_address, str(e))
             finally:
-                # close_audio_file(wf)  # 주석 처리: WAV 파일 닫기  # WAV 파일 닫기
+                # close_audio_file(wf)  # WAV 파일 닫기
                 pass
 
         else:
