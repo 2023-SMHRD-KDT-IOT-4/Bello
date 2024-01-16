@@ -216,7 +216,15 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 <hr>
 
 ### 7.1. Frontend
-...
+<details>
+  <summary><b>CSS 적용</b></summary>
+    <div markdown="1">
+	
+1. 프론트는 vsCode에서 개발을 진행 하여 작성한 코드를 팀원들이 사용하는 Spring에 넣어 실행하니 실제 웹페이지에서 적용되지 않음<br>
+2. 경로가 잘 못 되어있는 줄 알고 경로를 다시 지정하였지만 적용되지 않음<br>
+3. 찾아보니 브라우저에 캐시가 남아있기 때문이라는 걸 발견 이후 남아있는 캐시를 모두 지우고 새로고침했더니 수정된 CSS 웹 페이지에 적용됨
+    </div>
+</details>
 ### 7.2. Backend
 
 <details>
