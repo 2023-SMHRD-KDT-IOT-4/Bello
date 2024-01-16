@@ -40,6 +40,7 @@
 ## 3. 설계과정
 
 ### 3-1. 서비스 흐름도
+![서비스흐름도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a58e8a40-a25a-4a09-84be-6d3cc4fdd4ab)
 
 ### 3-2. 유스케이스 다이어그램
 
