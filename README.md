@@ -58,9 +58,12 @@ https://youtu.be/67ULc5qw4nA
 ![화면설계](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1d14459d-cd5d-4077-b48f-a7cc6b7ab7b3)
 
 ## 5. 핵심 기능
-벨로서비스는 도어벨의 필수기능은 현관 밖 스트리밍 서비스를 제공하며,
-핵심기능은 방문자와 사용자간의 양방향 메세지 소통 기능입니다.
+벨로서비스는 도어벨의 필수기능은 현관 밖 스트리밍 서비스를 제공하며,<br>
+핵심기능은 방문자와 사용자간의 양방향 메세지 소통 기능입니다.<br>
 또, 현관 밖에서 동작감지를 통해 영상을 녹화하고 저장하는 기능을 제공합니다.
+<br>
+![주요기능](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1f7aeecc-0a18-432b-abdc-78b7f007a567)
+
 
 ### 5.1. 메세지 및 알림기능
 ![메세지소통](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/0b865a77-7dea-4a72-8e8f-7dd59abc5b05)
