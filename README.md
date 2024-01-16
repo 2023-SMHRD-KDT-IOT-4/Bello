@@ -11,7 +11,8 @@
 - 팀장: 이승재(PM, Rasberrypi, Python-Flask)
 - 팀원: 유민지(Frontend : JavaScript, HTML, CSS)
 - 팀원: 김현정(Frontend : JavaScript, HTML, CSS)
-- 팀원: 김한솔(DB : MySQL, Backend : Java - Spring, WebSocket)
+- 팀원: 김한솔<br>(DB설계, 테이블 생성 및 관리, 트리거 설정, DB관련 문서 작성<br>
+회원 관리, WebSoket 연결, 서버 운용)
 - 팀원: 전호성(Backend : Java - Spring, WebSocket)
 
 </br>
@@ -147,6 +148,7 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
     
   
 </details><br><br><br>
+
 ### 5.3. 스트리밍 기능
 ![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
 
