@@ -58,6 +58,8 @@
     <div markdown="1">
       product_info에서 제품의 시리얼키인 doorbell_num을 확인 후 회원가입을 할 때
       Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하여 회원가입 시 입력한 정보를 doorbell_info에 자동으       로 입력되는 튜플이 생성되도록 함 (doorbell_num, user_id 나머지는 default값 지정)
+      <br><br>
+      user_info의 비밀번호는 MD5 함수를 사용하여 암호화 하였고 doorbell_num은 UUID함수를 사용하여 난수화된 상태의 키를         시리얼 키로 사용하였다.
     </div>
 </details>
 
@@ -82,13 +84,15 @@ https://youtu.be/67ULc5qw4nA
 ![주요기능](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1f7aeecc-0a18-432b-abdc-78b7f007a567)
 
 
-### 5.1 회원가입 시 아이디, 시리얼키 중복 확인
+### 5.1. 회원가입 시 아이디, 시리얼키 중복 확인
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/java/com/smhrd/bello/MemberController.java#L87
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/webapp/WEB-INF/views/join.jsp#L46
+
 비동기 통신을 이용한 아이디 중복 확인 (메서드, 자바스크립트 ajax)
 
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/java/com/smhrd/bello/MemberController.java#L100
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/webapp/WEB-INF/views/join.jsp#L67
+
 비동기 통신을 이용한 제품 시리얼 키 확인 (메서드, 자바스크립트 ajax)
 
 ### 5.2. 메세지 및 알림기능
