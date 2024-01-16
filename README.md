@@ -227,7 +227,7 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 <details>
  <summary><b>페이지 설계</b></summary>
     <div>- 프론트는 처음 개발 목표였던 메뉴에서 메세지를 페이지와 비디오목록을 볼 수 있는 페이지를 따로 코딩하였으나 프로젝트 시간이 부족하여 기능은 실제로 구현되지 않아 최종결과물에서는 빠지게 되었다. 이를 통해 팀원간 소통이 얼마나 중요한지도 알게되었다.</div>
-<details>
+</details>
 
 ### 7.2. Backend
 
