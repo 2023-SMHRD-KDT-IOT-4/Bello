@@ -1,6 +1,6 @@
 # streaming_server.py
 
-from flask import Flask, render_template, request# 수정된 부분
+from flask import Flask, render_template, request
 import websockets
 import asyncio
 
