@@ -42,6 +42,10 @@
 
 ### 3-1. 서비스 흐름도
 ![서비스흐름도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a58e8a40-a25a-4a09-84be-6d3cc4fdd4ab)
+<details>
+<summary><b>서비스 흐름도 설명 펼치기</b></summary>
+<div markdown="1">
+
 ### 3-2. 유스케이스 다이어그램
 ![유스케이스](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/75a1250d-3351-4504-a283-d0852edc94f4)
 ### 3-3. ER 다이어그램
