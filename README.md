@@ -1,5 +1,7 @@
 # Project : Bello
-> 스마트그리드기반 IoT융합 SW전문가 과정 핵심프로젝트 
+<hr>
+<br>
+> 스마트그리드기반 IoT융합 SW전문가 과정 핵심프로젝트 <br>
 > IoT기반 스마트 도어벨 서비스 : Bello
 
 </br>
