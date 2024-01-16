@@ -144,7 +144,9 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
     함수 호출을 통해 받은 메시지가 페이지에 동적으로 표시됨.<br><br>
 
   ### written by 전호성
-    </div>
+    
+    
+  
 </details>
 ### 5.3. 스트리밍 기능
 ![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
