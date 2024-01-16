@@ -1,4 +1,4 @@
-# Project : Bello
+![서비스흐름도_txt](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/096fe6ea-55c8-43cf-8cc1-9822d3edb991)# Project : Bello
 <br>
 > 스마트그리드기반 IoT융합 SW전문가 과정 핵심프로젝트 <br>
 > IoT기반 스마트 도어벨 서비스 : Bello
@@ -46,7 +46,8 @@
 <details>
   <summary><b>서비스 흐름도 설명 펼치기</b></summary>
     <div markdown="1">
-      ...
+      ![서비스흐름도_txt](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/280dd8eb-8729-4b51-9108-c6556f9b240b)
+
     </div>
 </details>
 
@@ -66,7 +67,13 @@
 
 ### 3-4. IoT 회로도
 ![회로도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a3692510-8051-48ee-a6d4-55a9673df24a)
+<details>
+  <summary><b>회로도 설명 펼치기</b></summary>
+    <div markdown="1">
+      ![회로도_txt](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/e72db196-0cd6-411d-8062-ec2aee9e03a0)
 
+    </div>
+</details>
 ### 3-5. 웹 페이지 설계
 ![메뉴구성](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/6ddfb345-8349-479c-950e-7bcf8b73832f)
 <details>
