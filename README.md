@@ -11,7 +11,7 @@
 - 팀장: 이승재(PM, Rasberrypi, Python-Flask)
 - 팀원: 유민지(Frontend : JavaScript, HTML, CSS)
 - 팀원: 김현정(Frontend : JavaScript, HTML, CSS)
-- 팀원: <a href="https://github.com/HSkimPF">김한솔</a><br>(DB설계, 테이블 생성 및 관리, 트리거 설정, DB관련 문서 작성<br>
+- 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br>(DB설계, 테이블 생성 및 관리, 트리거 설정, DB관련 문서 작성<br>
 회원 관리, WebSoket 연결, 서버 운용)
 - 팀원: 전호성(Backend : Java - Spring, WebSocket)
 
