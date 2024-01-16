@@ -47,40 +47,28 @@
 ![ER](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1a55b668-e57e-4b7e-822d-f950fd0c8bcf)
 ### 3-4. IoT 회로도
 ![회로도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a3692510-8051-48ee-a6d4-55a9673df24a)
-## 4. 시연영상
+
+## 4. 시연 및 화면설계
+
+### 4-1. 시연영상
 https://youtu.be/67ULc5qw4nA
 
+### 4-2. 화면설계
+![화면설계](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1d14459d-cd5d-4077-b48f-a7cc6b7ab7b3)
+
 ## 5. 핵심 기능
-이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
-사용자는 단지 컨텐츠의 카테고리를 선택하고, URL만 입력하면 끝입니다.  
-이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.  
+벨로서비스는 도어벨의 필수기능은 현관 밖 스트리밍 서비스를 제공하며,
+핵심기능은 방문자와 사용자간의 양방향 메세지 소통 기능입니다.
+또, 현관 밖에서 동작감지를 통해 영상을 녹화하고 저장하는 기능을 제공합니다.
 
-<details>
-<summary><b>핵심 기능 설명 펼치기</b></summary>
-<div markdown="1">
+### 5.1. 메세지 및 알림기능
+![메세지소통](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/0b865a77-7dea-4a72-8e8f-7dd59abc5b05)
 
-### 5.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+### 5.2. 스트리밍 기능
+![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
 
-### 5.2. 사용자 요청
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
-
-- **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
-  - Vue.js로 렌더링된 화면단에서, 사용자가 등록을 시도한 URL의 모양새를 정규식으로 확인합니다.
-  - URL의 모양새가 아닌 경우, 에러 메세지를 띄웁니다.
-
-- **Axios 비동기 요청** :pushpin: [코드 확인]()
-  - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
-
-### 5.3. Controller
-
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
-
-- **요청 처리** :pushpin: [코드 확인](https://github.com/2023-SMHRD-KDT-IOT-4/Repo/blob/94e1b3a93c48cc3fdb51d4468de151930705faa6/Middle_project12/src/main/webapp/WEB-INF/views/BoardContent.jsp#L20)
-  - Controller에서는 요청을 화면단에서 넘어온 요청을 받고, Service 계층에 로직 처리를 위임합니다.
-
-- **결과 응답** :pushpin: [코드 확인]()
-  - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
+### 5.3. 설정 기능
+![설정](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/eed80171-fd8f-462c-b5f4-a846acde7b3f)
 
 ### 5.4. Service
 
@@ -116,7 +104,13 @@ https://youtu.be/67ULc5qw4nA
 
 </br>
 
-## 6. 핵심 트러블 슈팅
+## 6. 트러블 슈팅 및 발전방향
+![트러블슈팅](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/49870111-fc74-471a-9cfb-1d0311092092)
+<hr>
+![발전방향](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/d3517f22-aeac-46d4-b8f1-1acfe6399939)
+
+
+
 ### 5.1. 컨텐츠 필터와 페이징 처리 문제
 - 저는 이 서비스가 페이스북이나 인스타그램 처럼 가볍게, 자주 사용되길 바라는 마음으로 개발했습니다.  
 때문에 페이징 처리도 무한 스크롤을 적용했습니다.
