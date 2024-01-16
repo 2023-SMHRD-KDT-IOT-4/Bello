@@ -46,7 +46,7 @@
 ![서비스흐름도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a58e8a40-a25a-4a09-84be-6d3cc4fdd4ab)
 
 <details>
-  <summary><b>EER 다이어그램 설명 펼치기</b></summary>
+  <summary><b>서비스 흐름도 설명 펼치기</b></summary>
     <div markdown="1">
 	![서비스흐름도 설명을 보려면 클릭하세요](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a63cfb24-934f-488c-a8d3-dd685b119242)
     </div>
