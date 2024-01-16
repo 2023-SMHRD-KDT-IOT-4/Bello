@@ -1,4 +1,4 @@
-![서비스흐름도_txt](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/096fe6ea-55c8-43cf-8cc1-9822d3edb991)# Project : Bello
+# Project : Bello
 <br>
 > 스마트그리드기반 IoT융합 SW전문가 과정 핵심프로젝트 <br>
 > IoT기반 스마트 도어벨 서비스 : Bello
