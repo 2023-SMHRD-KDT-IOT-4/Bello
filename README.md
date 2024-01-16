@@ -78,7 +78,17 @@
 
 ### 3-6. 화면 설계
 ![화면설계](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1d14459d-cd5d-4077-b48f-a7cc6b7ab7b3)
-
+<details>
+  <summary><b>화면 설계 설명 펼치기</b></summary>
+    <div markdown="1">
+    화면 설계 시 사용자 편리성을 중점으로 두어 웹 앱사이즈(width 480px)페이지 구현<br>
+    로그인 성공 시 메인 페이지로 이동 위해 버튼 구현<br>
+    메인 페이지에서 버튼 클릭 시 각각 메시지,스트리밍,설정 페이지로 이동 위한 버튼 구현<br>
+    채팅 구간(fieldset,legend태그) 및 알림 확인과 메시지 보내는 기능(form,submit태그)<br>
+    사용자용 LCD페이지 상단 부분 버튼 구현(종 모양),연결여부 상태 확인창 및 전송메시지 버튼 구현<br>
+    모든 버튼들은 사용자가 터치, 클릭 할 경우 hover기능<br>
+    </div>
+</details>
 ## 4. 시연영상
 https://youtu.be/67ULc5qw4nA
 
