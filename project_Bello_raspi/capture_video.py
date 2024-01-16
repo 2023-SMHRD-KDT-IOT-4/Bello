@@ -1,3 +1,6 @@
+# capture_video.py
+# /home/bello/project_env/bin/python /home/bello/project_test/capture_mp4.py
+
 import RPi.GPIO as GPIO
 import cv2
 import time
