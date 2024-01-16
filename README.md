@@ -45,6 +45,8 @@
 <details>
 <summary><b>서비스 흐름도 설명 펼치기</b></summary>
 <div markdown="1">
+  ...
+</div>
 
 ### 3-2. 유스케이스 다이어그램
 ![유스케이스](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/75a1250d-3351-4504-a283-d0852edc94f4)
