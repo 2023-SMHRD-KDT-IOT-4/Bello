@@ -197,28 +197,14 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
     </div>
 </details>
 
-### 5.4. 설정 기능
-![설정](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/eed80171-fd8f-462c-b5f4-a846acde7b3f)
-<details>
-  <summary><b>설정 기능 설명 펼치기</b></summary>
-    <div markdown="1">
-        - 라즈베리파이에서 Python-Flask서버를 통해 설정값을 DB에 저장한다.<br>
-        - 볼륨 바 조정를 조정하여 변경하기를 누르면 해당 정수값이 DB에 UPDATE되고 LCD페이지에 해당 값을 SELECT하여 Pyaudio라이브러리를 통해 라즈베리파이에 반영된다.<br>
-        - 벨소리를 지정하여 변경하기를 누르면 해당 음악파일의 경로가 DB에 UPDATE되고 LCD페이지에 해당 파일을 SELECT하여 반영된다.<br>
-    </div>
-</details>
-
 ## 6. 발전방향
 ![발전방향](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/d3517f22-aeac-46d4-b8f1-1acfe6399939)
 <hr>
 <details>
   <summary><b>IoT측면 발전 방향 설명 펼치기</b></summary>
     <div markdown="1">
-        - 메인페이지로 부터 라즈베리파이에서 실행되는 서버로 접근할 때 쿼리스트링으로 user_id를 받아오는데, 아이디가 URL에 노출됨.             <br>
-            - 아이디를 넘겨받는 방식을 POST방식으로 받거나 암호화해서 넘겨받고 Flask에서 해당값을 확인하는 과정이 필요할 것으로 사료                됨. <br>
-        - 스트리밍페이지를 유저별로 생성하여 실행되는 로직 필요.<br>
-        - 현재 스트리밍페이지의 URL은 라즈베리파이의 내부아이피를 노출시키므로 Reverse Proxy를 사용하거나, 무작위 값으로 바인딩 하는           등의 로직이 필요함.<br>
-        - 동작감지의 예민도를 조정하여 실사용에 적합한 조정값을 찾는 과정 필요.
+	![IoT측면 발전방향을 보려면 클릭하세요](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/c69940d0-27fc-4989-b0c1-42ee012d7eda)
+
     </div>
 </details>
 
