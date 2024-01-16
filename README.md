@@ -249,7 +249,7 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
 <details>
   <summary><b>백엔드 회고</b></summary>
-  <div markdown="3">
+  
   
     <p style="font-size: 1.1em;">초기 구상 당시 동기 통신으로만 벨로의 기능을 전부 구현 할 수 있다고 판단하고 개발을 시작하였습니다.
     또한, 기존에 주로 사용하던 이클립스에서 벗어나 새로운 개발 <b>Tool</b>인 Visual Studio를 사용해 개발을 진행하고자 하였습니다.</p>
@@ -267,5 +267,5 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
     <p style="font-size: 1.1em;">그러나 그 과정에서 <b>VS</b>, <b>eclipse</b>, <b>spring (3,4)</b>, <b>spring boot</b> 등 여러 개발 환경의 장단점과 차이점에 대해 인지 할 수 있었습니다.
     이번 프로젝트를 통해 개발환경 초기 선택의 중요성을 몸소 깨달았기 때문에, 추후 프로젝트에서는 목표한 기능을 철저히 세분화하고 이에 따라 개발환경 선택또한 좀 더 신중하게 진행하면 더욱 효율적인 프로젝트를 진행할 수 있을 것이라 생각합니다.</p>
     
-  </div>
+  
 </details>
