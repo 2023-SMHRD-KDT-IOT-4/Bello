@@ -183,17 +183,18 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 <details>
   <summary><b>스트리밍 설명 펼치기</b></summary>
     <div markdown="1">
-        - Main페이지에서 STREAMING버튼을 클릭하면 Streaming page로 redirect된다.<br>
-        - 스트리밍서버는 라즈베리파이에서 Python-Flask, SocketIO에서 제공한다.<br>
-        - VideoStream Class에서 영상스트리밍을 제공한다.<br>
-        - AudioStream Class에서 음성스트리밍을 제공한다.<br>
-        - StreamingOutput Class에서 이미지 프레임을 담고있는 버퍼를 제공한다.<br>
-        - write Method를 통해 이미지 프레임을 버퍼에 쓰고, 이를 기다리는 클라이언트에 알리기위해 'condition'을 사용한다.<br>
-        - StreamingHandler Class는 HTTP요청에 대한 핸들러 클래스 이다.<br>
-            - index.html, stream.mjpg, audio.wav등의 경로에 대한 요청을 처리하고 이미지와 음성 스트리밍을 처리한다.<br>
-        - StreamingServer Class는 멀티 스레딩을 지원하는 HTTP서버를 생성한다.<br>
-            - 메인코드에서 Picamera를 초기화하고 스트리밍을 시작한 후 Flask, SocketIO, 오디오스트리밍을 시작한다.<br>
-        - Streaming코드의 주된 목적은 영상을 웹페이지에 스트리밍하고, 동시에 오디오를 읽어들여 웹페이지에서 듣기 기능을 제공하는 것이다.
+ 	![스트리밍 설명을 보려면 클릭하세요>>](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/b255d9a3-79fc-472d-b2f9-2fcf909fb083)
+
+    </div>
+</details>
+
+### 5.4. 설정 기능
+![설정](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/eed80171-fd8f-462c-b5f4-a846acde7b3f)
+<details>
+  <summary><b>설정 기능 설명 펼치기</b></summary>
+    <div markdown="1">
+	![설정기능 설명을 보려면 클릭하세요](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/570631f8-1434-4b36-933f-6d9d753002b0)
+
     </div>
 </details>
 
