@@ -1,5 +1,4 @@
 # streaming.py
-# /bin/python /home/bello/project_test/streaming.py
 import io
 import logging
 import os
@@ -9,12 +8,11 @@ from threading import Condition
 import threading
 import wave
 import pyaudio
-import cv2
 from datetime import datetime
 from picamera2 import Picamera2
 from picamera2.encoders import JpegEncoder
 from picamera2.outputs import FileOutput
-from flask import Flask, render_template, Response
+from flask import Flask
 from flask_socketio import SocketIO
 
 app = Flask(__name__)
@@ -27,37 +25,7 @@ script_dir = os.path.dirname(os.path.realpath(__file__))
 with open(os.path.join(script_dir, 'templates', 'index.html'), 'r') as f:
     PAGE = f.read()
 
-# 영상 스트리밍을 위한 클래스 - 영상을 임시로 저장하고 웹서버로 전송
-class VideoStream:
-    def __init__(self, max_files=10):
-        self.max_files = max_files
-        self.file_count = self.get_latest_file_count() + 1
-        self.video_writer = self.create_video_writer()
-
-    def get_latest_file_count(self):
-        files = [f for f in os.listdir() if f.startswith("video_") and f.endswith(".avi")]
-        if files:
-            latest_file = max(files, key=lambda x: int(x.split('_')[1].split('.')[0]))
-            return int(latest_file.split('_')[1].split('.')[0])
-        else:
-            return 0
-
-    def create_video_writer(self):
-        file_name = f'video_{self.file_count}.avi'
-        return cv2.VideoWriter(file_name, cv2.VideoWriter_fourcc(*'XVID'), 20.0, (640, 480))
-
-    def write_frame(self, frame):
-        if self.file_count > self.max_files:
-            self.release()
-            self.file_count = 1
-            self.video_writer = self.create_video_writer()
-        self.video_writer.write(frame)
-        self.file_count += 1
-
-    def release(self):
-        self.video_writer.release()
-        self.delete_old_files()
-# 음성 스트리밍을 위한 클래스 - 음성을 임시로 저장하고 웹서버로 전송    
+    
 class AudioStream:
     def __init__(self, device_index=2):
         self.p = pyaudio.PyAudio()
@@ -72,7 +40,6 @@ class AudioStream:
         while True:
             yield self.stream.read(1024)
 
-#음성파일을 생성하는 매서드
 def create_audio_file():
     wf = wave.open(f'audio_{datetime.now().strftime("%Y%m%d%H%M%S")}.wav', 'wb')
     wf.setnchannels(1)
@@ -90,12 +57,15 @@ class StreamingOutput(io.BufferedIOBase):
     def __init__(self):
         self.frame = None
         self.condition = Condition()
-        #self.video_stream = VideoStream()
 
     def write(self, buf):
         with self.condition:
             self.frame = buf
             self.condition.notify_all()
+            
+    def release(self):
+
+        pass
         
 
 class StreamingHandler(server.BaseHTTPRequestHandler):
@@ -138,6 +108,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
             self.send_header('Content-Type', 'audio/wav')
             self.end_headers()
 
+
             try:
                 pass
 
@@ -146,7 +117,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
                     'Removed audio streaming client %s: %s',
                     self.client_address, str(e))
             finally:
-                # close_audio_file(wf)  # WAV 파일 닫기
+
                 pass
 
         else:
@@ -167,14 +138,13 @@ if __name__ == '__main__':
         address = ('172.30.1.6', 8000)
         server = StreamingServer(address, StreamingHandler)
 
-        # 여러 마이크 중 선택하려면 device_index를 적절한 값으로 설정
+ 
         selected_device_index = 2
         audio_stream = AudioStream(device_index=selected_device_index)
 
         audio_thread = threading.Thread(target=server.serve_forever)
         audio_thread.start()
 
-        # Start Flask with SocketIO
         socketio.run(app, host='172.30.1.6', port=8001, use_reloader=False, debug=False)
 
     finally:
