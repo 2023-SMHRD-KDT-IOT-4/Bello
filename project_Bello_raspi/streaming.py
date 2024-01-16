@@ -27,6 +27,7 @@ script_dir = os.path.dirname(os.path.realpath(__file__))
 with open(os.path.join(script_dir, 'templates', 'index.html'), 'r') as f:
     PAGE = f.read()
 
+# 영상 스트리밍을 위한 클래스 - 영상을 임시로 저장하고 웹서버로 전송
 class VideoStream:
     def __init__(self, max_files=10):
         self.max_files = max_files
@@ -56,7 +57,7 @@ class VideoStream:
     def release(self):
         self.video_writer.release()
         self.delete_old_files()
-    
+# 음성 스트리밍을 위한 클래스 - 음성을 임시로 저장하고 웹서버로 전송    
 class AudioStream:
     def __init__(self, device_index=2):
         self.p = pyaudio.PyAudio()
@@ -71,6 +72,7 @@ class AudioStream:
         while True:
             yield self.stream.read(1024)
 
+#음성파일을 생성하는 매서드
 def create_audio_file():
     wf = wave.open(f'audio_{datetime.now().strftime("%Y%m%d%H%M%S")}.wav', 'wb')
     wf.setnchannels(1)
