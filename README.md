@@ -212,8 +212,6 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 <details>
   <summary><b>백엔드 트러블슈팅</b></summary>
     <div markdown="1">
-      
-      
       - 당초 개발환경을 통일하기 위해 Visual Studio를 사용하여 환경을 구축<br>
       - Maven 방법으로 만들기 위하여 Eclipse를 사용하여 다시 구축<br>
       - 알림을 받아오는 핵심 기능을 구현하기 위하여 다시 Spring으로 환경을 구축<br>
