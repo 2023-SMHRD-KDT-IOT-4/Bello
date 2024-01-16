@@ -71,7 +71,13 @@
 
 ### 3-4. IoT 회로도
 ![회로도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a3692510-8051-48ee-a6d4-55a9673df24a)
+<details>
+  <summary><b>회로도 설명 펼치기</b></summary>
+    <div markdown="1">
+	![회로도 설명을 보려면 클릭하세요](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/25437ae8-190d-4e18-8e4f-e461b10f2423)
 
+    </div>
+</details>
 ### 3-5. 웹 페이지 설계
 ![메뉴구성](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/6ddfb345-8349-479c-950e-7bcf8b73832f)
 <details>
