@@ -19,6 +19,7 @@
 #### `Back-end`
   - Java 8
   - Spring 4
+  - Spring Boot
   - Maven
   - WebSocket
   - Python
@@ -37,13 +38,19 @@
 </br>
 
 ## 3. 설계과정
-![EER최종](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847475/5547804d-5fed-4f57-9170-c6527792ecca)
-<br>
-![트리거](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847475/5a8c4c94-635e-4d7b-ab09-4b78da84ecac)!
-<br>
-product_info에서 제품의 시리얼키인 doorbell_num을 확인 후 회원가입을 할 때
-Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하여 회원가입 시 입력한 정보를 doorbell_info에 자동으로 입력되는 튜플이 생성되도록 함 (doorbell_num, user_id 나머지는 default값 지정)
-## 4. 핵심 기능
+
+### 3-1. 서비스 흐름도
+
+### 3-2. 유스케이스 다이어그램
+
+### 3-3. ER 다이어그램
+
+### 3-4. IoT 회로도
+
+## 4. 시연영상
+
+
+## 5. 핵심 기능
 이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
 사용자는 단지 컨텐츠의 카테고리를 선택하고, URL만 입력하면 끝입니다.  
 이 단순한 기능의 흐름을 보면, 서비스가 어떻게 동작하는지 알 수 있습니다.  
@@ -52,10 +59,10 @@ Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
 
-### 4.1. 전체 흐름
+### 5.1. 전체 흐름
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
 
-### 4.2. 사용자 요청
+### 5.2. 사용자 요청
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
 
 - **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/JungHyung2/gitio.io/blob/95b4c4f06a2a5a74a00f81a3c3fcc003c994725f/index.html#L15C8-L15C26)
@@ -65,7 +72,7 @@ Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하
 - **Axios 비동기 요청** :pushpin: [코드 확인]()
   - URL의 모양새인 경우, 컨텐츠를 등록하는 POST 요청을 비동기로 날립니다.
 
-### 4.3. Controller
+### 5.3. Controller
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_controller.png)
 
@@ -75,7 +82,7 @@ Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하
 - **결과 응답** :pushpin: [코드 확인]()
   - Service 계층에서 넘어온 로직 처리 결과(메세지)를 화면단에 응답해줍니다.
 
-### 4.4. Service
+### 5.4. Service
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_service1.png)
 
@@ -96,7 +103,7 @@ Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하
   - 컨텐츠에 이미지가 없을 경우, 미리 설정해둔 기본 이미지를 사용하고, 제목이 없을 경우 생략합니다.
 
 
-### 4.5. Repository
+### 5.5. Repository
 
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_repo.png)
 
@@ -109,7 +116,7 @@ Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하
 
 </br>
 
-## 5. 핵심 트러블 슈팅
+## 6. 핵심 트러블 슈팅
 ### 5.1. 컨텐츠 필터와 페이징 처리 문제
 - 저는 이 서비스가 페이스북이나 인스타그램 처럼 가볍게, 자주 사용되길 바라는 마음으로 개발했습니다.  
 때문에 페이징 처리도 무한 스크롤을 적용했습니다.
