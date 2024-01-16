@@ -38,10 +38,12 @@
 </br>
 
 ## 3. 설계과정
-![](![image](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/7c51ff4a-6789-45c0-a298-ab7855e6cba7))
-![](https://github.com/JungHyung2/gitio.io/blob/master/assets/images/portfolio/p1.jpg)
-
-
+![EER최종](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847475/5547804d-5fed-4f57-9170-c6527792ecca)
+<br>
+![트리거](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847475/5a8c4c94-635e-4d7b-ab09-4b78da84ecac)!
+<br>
+product_info에서 제품의 시리얼키인 doorbell_num을 확인 후 회원가입을 할 때
+Foreign Key 사용 시 회원 가입에 문제가 생겨서 Trigger를 사용하여 회원가입 시 입력한 정보를 doorbell_info에 자동으로 입력되는 튜플이 생성되도록 함 (doorbell_num, user_id 나머지는 default값 지정)
 ## 4. 핵심 기능
 이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
 사용자는 단지 컨텐츠의 카테고리를 선택하고, URL만 입력하면 끝입니다.  
