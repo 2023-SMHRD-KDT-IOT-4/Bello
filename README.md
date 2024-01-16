@@ -48,14 +48,14 @@
 ![ER](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1a55b668-e57e-4b7e-822d-f950fd0c8bcf)
 ### 3-4. IoT 회로도
 ![회로도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a3692510-8051-48ee-a6d4-55a9673df24a)
+### 3-5. 웹 페이지 메뉴 구성
+![메뉴구성](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/6ddfb345-8349-479c-950e-7bcf8b73832f)
+### 3-6. 화면 설계
+![화면설계](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1d14459d-cd5d-4077-b48f-a7cc6b7ab7b3)
 
-## 4. 시연 및 화면설계
-
-### 4-1. 시연영상
+## 4. 시연영상
 https://youtu.be/67ULc5qw4nA
 
-### 4-2. 화면설계
-![화면설계](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1d14459d-cd5d-4077-b48f-a7cc6b7ab7b3)
 
 ## 5. 핵심 기능
 벨로서비스는 도어벨의 필수기능은 현관 밖 스트리밍 서비스를 제공하며,<br>
