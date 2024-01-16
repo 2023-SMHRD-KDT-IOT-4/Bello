@@ -130,7 +130,7 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
    - WebSocket 이벤트핸들링:<br><br>
     open 이벤트 핸들러     >>>> WebSocket 연결이 열리면 실행되는 코드입니다. 콘솔에 연결이 열리면 'Connected.'라는 메시지를 서버로 전송.<br>
-    message 이벤트 핸들러  >>>> 서버로부터 메시지를 받으면 실행되는 코드입니다.<br>
+    message 이벤트 핸들러  >>>> 서버로부터 메시지를 받으면 실행되는 코드.<br>
                                콘솔에 메시지를 출력하고, displayMessage 함수를 호출하여 받은 메시지를 페이지에 표시.<br>
     close 이벤트 핸들러    >>>> WebSocket 연결이 닫히면 콘솔에 메시지를 출력하는 코드.<br>
     error 이벤트 핸들러    >>>> WebSocket 에러가 발생하면 콘솔에 메시지를 출력하는 코드.<br><br>
@@ -139,10 +139,10 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
     Exit 버튼 >>>> 클릭 시 WebSocket 연결을 종료합니다.<br>
     Send 버튼 >>>> 클릭 시 입력된 메시지를 서버로 전송하며, 입력 창을 초기화합니다.<br><br>
     - displayMessage 함수 (== HTML 버튼과 연결하여 실질적으로 메시지 send하는 함수):<br>
-    jQuery를 사용하여 #chatMessageArea라는 HTML 요소를 선택하고, 해당 요소에 <p> 태그로 감싼 새로운 메시지를 추가함.<br>
-    함수 호출을 통해 받은 메시지가 페이지에 동적으로 표시됨.<br><br>
+    jQuery를 사용하여 #chatMessageArea라는 HTML 요소를 선택하고, 해당 요소에 P태그로 감싼 새로운 메시지를 추가함.<br>
+     결과적으로 함수 호출을 통해 받은 메시지가 페이지에 동적으로 표시됨.<br><br>
 
-                                                                                               - written by 전호성 
+                                                                                              > written by 전호성 
     
     
   
