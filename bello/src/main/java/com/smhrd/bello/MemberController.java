@@ -28,12 +28,6 @@ public class MemberController {
 	@RequestMapping(value = "/member/join.do", method = RequestMethod.POST)
 	public String join(@RequestParam("user_id") String user_id, @RequestParam("user_pw") String user_pw,
 			@RequestParam("user_name") String user_name, @RequestParam("doorbell_num") String doorbell_num) { // 리퀘스트파람
-																												// 이메일을
-																												// 받은걸
-																												// 스트링
-																												// 이메일
-																												// 변수에
-																												// 넣을꺼야
 
 		SpringMember existingMember = mapper.idChk(user_id);
 		SpringMember existingSkey = mapper.skChk(doorbell_num);

@@ -109,7 +109,6 @@
                     socket.send(message);
                     $('#message').val(''); // 메시지 전송 후 입력창 초기화
 
-               
                 }
             });
             // 벨버튼 메시지 전송
@@ -128,8 +127,7 @@
                 
                     var chatArea = document.getElementById('chatArea');
                     chatArea.scrollTop = chatArea.scrollHeight;
-                    $('#message').val(''); // 메시지 전송 후 입력창 초기화
-
+                    $('#message').val(''); 
 
                 }
             });
@@ -149,10 +147,8 @@
                
                     var chatArea = document.getElementById('chatArea');
                     chatArea.scrollTop = chatArea.scrollHeight;
-                    $('#message').val(''); // 메시지 전송 후 입력창 초기화
+                    $('#message').val(''); 
 
-               
-                 
              }
            });
             $('#fixedMsgBtn2').click(function () {
@@ -170,9 +166,8 @@
                     
                         var chatArea = document.getElementById('chatArea');
                     chatArea.scrollTop = chatArea.scrollHeight;
-                        $('#message').val(''); // 메시지 전송 후 입력창 초기화
+                        $('#message').val(''); 
 
-               
                  }
                });
             $('#fixedMsgBtn3').click(function () {
@@ -190,7 +185,7 @@
                      
                         var chatArea = document.getElementById('chatArea');
                     chatArea.scrollTop = chatArea.scrollHeight;
-                        $('#message').val(''); // 메시지 전송 후 입력창 초기화
+                        $('#message').val(''); 
 
               
                  }
@@ -210,9 +205,8 @@
                     
                         var chatArea = document.getElementById('chatArea');
                     chatArea.scrollTop = chatArea.scrollHeight;
-                        $('#message').val(''); // 메시지 전송 후 입력창 초기화
+                        $('#message').val('');
 
-                   
                  }
                });
             $('#fixedMsgBtn5').click(function () {
@@ -230,9 +224,7 @@
                    
                         var chatArea = document.getElementById('chatArea');
                     chatArea.scrollTop = chatArea.scrollHeight;
-                        $('#message').val(''); // 메시지 전송 후 입력창 초기화
-
-           
+                        $('#message').val('');
                  }
                });
             // 추가: 채팅창에 메시지를 표시하는 함수
@@ -247,14 +239,8 @@
                 if (socket && socket.readyState === WebSocket.OPEN) {
                     const message = "버튼으로 전송한 메시지!";
                     socket.send(message);
-
-                   
                 }
-            }
-            
-         
-
-          
+            }          
         });
     </script>
 </body>

@@ -14,7 +14,7 @@
 </head>
 
 <body class="is-preload">
-	<!-- 로드될 때 화면 움직이고 싶을 때 is-preload -->
+	
 
 	<div id="header">
 		<span><a href="member/logout" id="logout">LOGOUT</a></span>

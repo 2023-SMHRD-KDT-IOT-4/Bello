@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration   
         PUBLIC "-//mybatis.org/DTD Config 3.0/EN"
-        "http://mybatis.org/dtd/mybatis-3-config.dtd"> <!-- 마이바티스설정 관련된 코드 -->
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.smhrd.bello.model.SpringMember" alias="Board"/>  <!-- 경로를 특정한 별칭으로 매핑해줌 -->
+		<typeAlias type="com.smhrd.bello.model.SpringMember" alias="Board"/> 
 	</typeAliases>
 </configuration>
