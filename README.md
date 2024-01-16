@@ -19,7 +19,6 @@
 #### `Back-end`
   - Java 8
   - Spring 4
-  - Spring Boot
   - Maven
   - WebSocket
   - Python
