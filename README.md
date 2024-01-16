@@ -95,9 +95,56 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
 비동기 통신을 이용한 제품 시리얼 키 확인 (메서드, 자바스크립트 ajax)
 
-### 5.2. 메세지 및 알림기능
+### 5.2. 메세지 및 알림기능 (websocket)
 ![메세지소통](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/0b865a77-7dea-4a72-8e8f-7dd59abc5b05)
+<details>
+  <summary><b>서비스 흐름도 설명 펼치기</b></summary>
+    <div markdown="1">
 
+#### 웹소켓 컨트롤러
+  - ChatWebSocketHandler 클래스:
+    Spring에서 기본 제공되는 TextWebSocketHandler를 확장(상속)하여 웹소켓 메시지를 처리하는 핸들러.
+      *cf) TextWebSocketHandler는 Spring Framework에서 제공하는 추상 클래스로, 텍스트 기반의 WebSocket 통신을 처리하는데 필요한 메서드들을 제공.
+    ChatWebSocketHandler의 handleTextMessage 메서드는 클라이언트로부터 텍스트 메시지를 수신하면 호출되며, 수신한 메시지를 그대로 클라이언트에게 반환한다.
+
+#### 웹소켓 관련 config 클래스:    
+  - WsConfig 클래스:
+    Spring 웹 소켓을 활용하여 WebSocket 기능을 설정하는 클래스.
+    @EnableWebSocket 어노테이션을 통해 Spring의 WebSocket 지원을 활성화하고,  WebSocketConfigurer 인터페이스를 구현하여 WebSocket 핸들러를 등록한다.
+
+#### WebSocket 핸들러 등록 (== 위 두 클래스의 실질적인 양방향 연결 수행 과정):
+   
+   - LCD page(방문객 페이지 (벨로 기기에 출력되는 페이지))측 연결
+    "/chat-ws" 경로로 들어오는 WebSocket 연결에 대해 ChatWebSocketHandler를 등록.
+    클라이언트가 메시지를 전송하면 해당 핸들러가 메시지를 처리하고, 결과를 다시 클라이언트에게 보냄.
+
+   - Main page(관리자 메인 페이지 (웹앱 컨트롤센터 페이지))측 연결 
+    "/main" 경로로 들어오는 WebSocket 연결을 처리할 핸들러를 chatWebSocketHandler로 정의하였으며 @Bean 어노테이션을 사용하여 ChatWebSocketHandler의 빈을 생성하고 있다. 해당 핸들러는 registerWebSocketHandlers 메서드에서 "/main" 경로로 들어오는 WebSocket 연결에 대해 ChatWebSocketHandler를 등록한다.
+
+#### Main, LCD page 웹페이지에서 WebSocket을 사용(구현)하는 JS코드 설명
+
+   - WebSocket 초기화:
+    $(document).ready(function () { ... }); >>>> 웹페이지가 렌더링되면 실행되는 함수로 WebSocket을 초기화하고 이벤트핸들러를 등록.
+    socket = new WebSocket($('#serverUrl').val()); >>>> 페이지에서 설정한 서버의 URL을 이용하여 WebSocket 객체를 생성합니다.
+
+   - WebSocket 이벤트핸들링:
+    open 이벤트 핸들러     >>>> WebSocket 연결이 열리면 실행되는 코드입니다. 콘솔에 연결이 열리면 'Connected.'라는 메시지를 서버로 전송.
+    message 이벤트 핸들러  >>>> 서버로부터 메시지를 받으면 실행되는 코드입니다.
+                               콘솔에 메시지를 출력하고, displayMessage 함수를 호출하여 받은 메시지를 페이지에 표시.
+    close 이벤트 핸들러    >>>> WebSocket 연결이 닫히면 콘솔에 메시지를 출력하는 코드.
+    error 이벤트 핸들러    >>>> WebSocket 에러가 발생하면 콘솔에 메시지를 출력하는 코드.
+
+   - 버튼 클릭 이벤트 핸들링 (기능은 있지만 HTML에서 hidden속성 적용하여 일반적 상황에서 사용불가):
+    Exit 버튼 >>>> 클릭 시 WebSocket 연결을 종료합니다.
+    Send 버튼 >>>> 클릭 시 입력된 메시지를 서버로 전송하며, 입력 창을 초기화합니다.
+
+    - displayMessage 함수 (== HTML 버튼과 연결하여 실질적으로 메시지 send하는 함수):
+    jQuery를 사용하여 #chatMessageArea라는 HTML 요소를 선택하고, 해당 요소에 <p> 태그로 감싼 새로운 메시지를 추가함.
+    함수 호출을 통해 받은 메시지가 페이지에 동적으로 표시됨.
+
+  ### written by HJ
+    </div>
+</details>
 ### 5.3. 스트리밍 기능
 ![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
 
