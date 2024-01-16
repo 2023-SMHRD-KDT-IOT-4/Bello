@@ -7,23 +7,33 @@
 ## 1. 제작 기간 & 참여 인원
 - 2024년 01월 04일 ~ 01월 15일
 - 팀 프로젝트(5명)
-- 팀장: 이승재(라즈베리파이, 파이썬)
-- 팀원: 
+- 팀장: 이승재(PM, Rasberrypi, Python-Flask)
+- 팀원: 유민지(Frontend : JavaScript, HTML, CSS)
+- 팀원: 김현정(Frontend : JavaScript, HTML, CSS)
+- 팀원: 김한솔(DB : MySQL, Backend : Java - Spring, WebSocket)
+- 팀원: 전호성(Backend : Java - Spring, WebSocket)
 
 </br>
 
 ## 2. 사용 기술
 #### `Back-end`
-  - Java 11
+  - Java 8
   - Spring 4
   - Spring Boot
   - Maven
-  - Websocket
+  - WebSocket
+  - Python
+  - Flask
   - MySQL
   - Javascript (ajax, DOM함수 일부)
 #### `Front-end`
-  - Vue.js 3.0
-  - Element UI
+  - JavaScript
+#### `IoT`
+  - Rasberrypi
+  - Flask
+  - Picamera2
+  - OpenCV
+  - RPi.GPIO
 
 </br>
 
