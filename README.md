@@ -48,7 +48,7 @@
 ### 3-4. IoT 회로도
 ![회로도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a3692510-8051-48ee-a6d4-55a9673df24a)
 ## 4. 시연영상
-
+https://youtu.be/67ULc5qw4nA
 
 ## 5. 핵심 기능
 이 서비스의 핵심 기능은 컨텐츠 등록 기능입니다.  
