@@ -72,13 +72,22 @@ https://youtu.be/67ULc5qw4nA
 ![주요기능](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1f7aeecc-0a18-432b-abdc-78b7f007a567)
 
 
-### 5.1. 메세지 및 알림기능
+### 5.1 회원가입 시 아이디, 시리얼키 중복 확인
+https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/java/com/smhrd/bello/MemberController.java#L87
+https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/webapp/WEB-INF/views/join.jsp#L46
+비동기 통신을 이용한 아이디 중복 확인 (메서드, 자바스크립트 ajax)
+
+https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/java/com/smhrd/bello/MemberController.java#L100
+https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/webapp/WEB-INF/views/join.jsp#L67
+비동기 통신을 이용한 제품 시리얼 키 확인 (메서드, 자바스크립트 ajax)
+
+### 5.2. 메세지 및 알림기능
 ![메세지소통](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/0b865a77-7dea-4a72-8e8f-7dd59abc5b05)
 
-### 5.2. 스트리밍 기능
+### 5.3. 스트리밍 기능
 ![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
 
-### 5.3. 설정 기능
+### 5.4. 설정 기능
 ![설정](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/eed80171-fd8f-462c-b5f4-a846acde7b3f)
 
 
