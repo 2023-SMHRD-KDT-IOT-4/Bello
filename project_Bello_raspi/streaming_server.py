@@ -1,5 +1,5 @@
 # streaming_server.py
-
+# 웹소켓 기본 코드 - streaming.py에서 객체 생성 및 호출용
 from flask import Flask, render_template, request
 import websockets
 import asyncio
