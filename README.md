@@ -13,8 +13,8 @@
 - 팀원: 김현정(Frontend : JavaScript, HTML, CSS)
 - 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br>(DB설계, 테이블 생성 및 관리, 트리거 설정, DB관련 문서 작성<br>
 회원 관리, WebSoket 연결, 서버 운용)
-- 팀원: 전호성(Backend : Java - Spring, WebSocket)
-
+- 팀원: <a href="https://github.com/hosungjoun">전호성</a><br>(Back-end, Spring: 회원 관리 및 관련기능 구현, websocket 구현,<br>
+ Back-front 연동(이식), 요구사항 정의서 작성)
 </br>
 
 ## 2. 사용 기술
