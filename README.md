@@ -184,7 +184,6 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
   <summary><b>스트리밍 설명 펼치기</b></summary>
     <div markdown="1">
  	![스트리밍 설명을 보려면 클릭하세요>>](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/b255d9a3-79fc-472d-b2f9-2fcf909fb083)
-
     </div>
 </details>
 
