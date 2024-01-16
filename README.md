@@ -95,12 +95,12 @@ https://youtu.be/67ULc5qw4nA
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/java/com/smhrd/bello/MemberController.java#L87
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/webapp/WEB-INF/views/join.jsp#L46
 
-비동기 통신을 이용한 아이디 중복 확인 (메서드, 자바스크립트 ajax)
+ - 비동기 통신을 이용한 아이디 중복 확인 (메서드, 자바스크립트 ajax)
 
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/java/com/smhrd/bello/MemberController.java#L100
 https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427b7a836b9dc0/bello/src/main/webapp/WEB-INF/views/join.jsp#L67
 
-비동기 통신을 이용한 제품 시리얼 키 확인 (메서드, 자바스크립트 ajax)
+ - 비동기 통신을 이용한 제품 시리얼 키 확인 (메서드, 자바스크립트 ajax)
 
 ### 5.2. 메세지 및 알림기능 (websocket)
 ![메세지소통](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/0b865a77-7dea-4a72-8e8f-7dd59abc5b05)
@@ -180,7 +180,8 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 <details>
   <summary><b>백엔드 트러블슈팅</b></summary>
     <div markdown="1">
-      ### 
+      
+      
       - 당초 개발환경을 통일하기 위해 Visual Studio를 사용하여 환경을 구축<br>
       - Maven 방법으로 만들기 위하여 Eclipse를 사용하여 다시 구축<br>
       - 알림을 받아오는 핵심 기능을 구현하기 위하여 다시 Spring으로 환경을 구축<br>
