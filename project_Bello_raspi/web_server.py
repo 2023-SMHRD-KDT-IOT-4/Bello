@@ -4,9 +4,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from flask_mysqldb import MySQL
 from flask_cors import CORS
-import secrets
 import alsaaudio
-import os
 from flask_socketio import SocketIO
 
 
@@ -24,7 +22,6 @@ app.config['MYSQL_DB'] = 'campus_23K_SG4_hack_3'
 mysql = MySQL(app)
 audio = alsaaudio.Mixer()
 
-#LCDpage 웹소켓으로 이전
 @app.route('/')
 def LCDpage():
     #session['user_id'] = 'test0110' #test용 세션
