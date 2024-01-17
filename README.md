@@ -29,6 +29,7 @@
   - MySQL
   - Javascript (ajax, DOM함수 일부)
 #### `Front-end`
+  - HTML/CSS
   - JavaScript
 #### `IoT`
   - Rasberrypi
