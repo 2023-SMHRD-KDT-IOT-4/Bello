@@ -257,18 +257,28 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
 ### 7.1. Frontend
 <details>
-  <summary><b>CSS 적용</b></summary>
+  <summary><b>프론트엔드 트러블 슈팅</b></summary>
     <div markdown="1">
-	
-	1. 프론트는 vsCode에서 개발을 진행 하여 작성한 코드를 팀원들이 사용하는 Spring에 넣어 실행하니 실제 웹페이지에서 적용되지 않음<br>
-	2. 경로가 잘 못 되어있는 줄 알고 경로를 다시 지정하였지만 적용되지 않음<br>
-	3. 찾아보니 브라우저에 캐시가 남아있기 때문이라는 걸 발견 이후 남아있는 캐시를 모두 지우고 새로고침했더니 수정된 CSS 웹 페이지에 적용됨
-    </div>
-</details>
+   <h3>1. CSS 적용</h3>
+   1) 프론트는 vsCode에서 개발을 진행하여 작성한 코드를 팀원들이 사용하는 Spring에 넣어 실행하니 <br>
+       실제 웹페이지에서 적용되지 않음<br>
+   2) 경로가 잘 못 되어있는 줄 알고 경로를 다시 지정하였지만 적용되지 않음<br>
+   3) 찾아보니 브라우저에 캐시가 남아있기 때문이라는 걸 발견 이후 남아있는 캐시를 모두 지우고 새로고침했더니 수정된       CSS 웹 페이지에 적용됨
+   <br>
+   <h3>2. 라즈베리파이와의 연동 오류</h3>
+   1) 비디오 페이지 목록(form태그) 클릭 시 팝업창으로 동영상이 열리도록(modal) 구현함
+	     <summary><b>구현한 비디오 페이지 목록 코드 펼치기</b></summary>
+     |![video](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847569/881a96bc-d856-4ea0-bf50-c8b40043a81a)
+	     <summary><b>모달연결 부분 코드 펼치기</b></summary>
+	    ![모달연결](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847569/bff2dcb9-a22c-44fa-b2bd-4037967a4ac2)
+	     <summary><b>모달 팝업 부분 코드 펼치기</b></summary>
+	    ![비디오재생모달](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847569/ecb3136f-ca1b-4c0a-a9a8-8175c06deab4)
+   2) 실제 적용 시 서버값을 불러오지 못해 저장된 동영상파일을 읽어오지 못하는 문제점 발생
+      	   
+   3) 시간적 한계로 해결하지 못하고 모달 기능 사용 X,  페이지 형태로만 사용하게 됨 <br>
 
-<details>
- <summary><b>페이지 설계</b></summary>
-    <div>- 프론트는 처음 개발 목표였던 메뉴에서 메세지를 페이지와 비디오목록을 볼 수 있는 페이지를 따로 코딩하였으나 프로젝트 시간이 부족하여 기능은 실제로 구현되지 않아 최종결과물에서는 빠지게 되었다. 이를 통해 팀원간 소통이 얼마나 중요한지도 알게되었다.</div>
+   
+    </div>
 </details>
 
 ### 7.2. Backend
@@ -293,6 +303,12 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 ...
 ## 8. 회고 / 느낀점
 
+<details>
+ <summary><b>프론트엔드 회고</b></summary>
+       <div markdown="1">
+    <div>-프론트는 처음 개발 목표였던 메뉴에서 메세지를 페이지와 비디오목록을 볼 수 있는 페이지를 따로 코딩하였으나 <br> 
+       프로젝트 시간이 부족하여 기능은 실제로 구현되지 않아 최종결과물에서는 빠지게 되었습니다. 이를 통해 팀원간 소통이 얼마나 중요한지도 알게되었습니다.</div>
+</details>
 
 <details>
   <summary><b>백엔드 회고</b></summary>
