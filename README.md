@@ -127,7 +127,9 @@ https://youtu.be/67ULc5qw4nA
 #### 핵심기능은 방문자와 사용자간의 양방향 메세지 소통 기능입니다.<br>
 #### 또, 현관 밖에서 동작감지를 통해 영상을 녹화하고 저장하는 기능을 제공합니다.
 <br>
-![주요기능](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/1f7aeecc-0a18-432b-abdc-78b7f007a567)
+![주요기능](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/b83188ae-034d-4960-8542-ec620523fe11)
+
+
 
 
 ### 5.1. 회원가입 시 아이디, 시리얼키 중복 확인
