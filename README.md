@@ -269,7 +269,8 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
    <br>
    <h3>2. 라즈베리파이와의 연동 오류</h3>
    1) 비디오 페이지 목록(form태그) 클릭 시 팝업창으로 동영상이 열리도록(modal) 구현함
-	     <summary><b>구현한 비디오 페이지 목록 코드 펼치기</b></summary>
+	 <details>
+  <summary><b>비디오페이지 구현 설명 펼치기</b></summary>
      |![video](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847569/881a96bc-d856-4ea0-bf50-c8b40043a81a)
 	     <summary><b>모달연결 부분 코드 펼치기</b></summary>
 	    ![모달연결](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847569/bff2dcb9-a22c-44fa-b2bd-4037967a4ac2)
@@ -355,7 +356,7 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
   <summary><b>IoT 회고</b></summary>
 
-- 라즈베피라이를 독학으로 배우는 과정이 순탄하지는 않았지만(OS포멧을 10번넘게...) 하나 하나 배우고 어느 기점을 넘기고서 부터는 즐겁게 할 수 있었다.
+- 라즈베리파이를 독학으로 배우는 과정이 순탄하지는 않았지만(OS포멧을 10번넘게...) 하나 하나 배우고 어느 기점을 넘기고서 부터는 즐겁게 할 수 있었다.
 - 라이브러리에 대한 소스코드를 얻고 활용하는 법을 알게되니 어떤 모듈을 사용하더라도 실행시킬수 있는 자신감이 생겼다.
 - Python코딩을 기초문법 정도만 배우고 시작해 Python에 대한 이해도가 낮았는데, 서버를 운용하고 로직을 추가, 분리, 수정하는 과정을 거치고나니 Python에 대한 이해도가 어느정도 높아졌다.
 
