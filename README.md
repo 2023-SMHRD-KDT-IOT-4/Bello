@@ -34,6 +34,8 @@
 #### `IoT`
   - Rasberrypi
   - Flask
+  - SoketIO
+  - WebSocket
   - Picamera2
   - OpenCV
 
