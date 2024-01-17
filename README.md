@@ -85,16 +85,12 @@
 <details>
 
   <summary><b>회로도 설명 펼치기</b></summary>
-
-    <div markdown="1">
     
 - 터치스크린(LCD): 라즈베리파이에 26Pin과 HDMI로 연결되어 있고, 방문자에게 사용자와의 소통을 제공한다.<br>
 - V2카메라:        라즈베리파이에 12Pin으로 연결되어 있고 Picamera2 라이브러리를 사용해 스트리밍을 담당한다.<br>
 - WEB CAM:        라즈베리파이에 USB로 연결되어 있고 OpenCV 라리브러리를 통해 영상 녹화를 담당한다.<br>
 - 동작감지센서:    라즈베리파이에 GPIO Pin으로 연결되어 있고 전원은 UNO에서 공급한다. 동작 감지가 트리거되면 WEB CAM에서 녹화 로직이 작동한다.<br>
 - UNO R3:         동작감지센서에 전원을 공급한다.<br>
-
-    </div>
 
 </details>
 
