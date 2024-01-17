@@ -83,10 +83,19 @@
 
 ![회로도](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/a3692510-8051-48ee-a6d4-55a9673df24a)
 <details>
+
   <summary><b>회로도 설명 펼치기</b></summary>
+
     <div markdown="1">
-	![회로도 설명을 보려면 클릭하세요>>](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/25437ae8-190d-4e18-8e4f-e461b10f2423)
+    
+- 터치스크린(LCD): 라즈베리파이에 26Pin과 HDMI로 연결되어 있고, 방문자에게 사용자와의 소통을 제공한다.<br>
+- V2카메라:        라즈베리파이에 12Pin으로 연결되어 있고 Picamera2 라이브러리를 사용해 스트리밍을 담당한다.<br>
+- WEB CAM:        라즈베리파이에 USB로 연결되어 있고 OpenCV 라리브러리를 통해 영상 녹화를 담당한다.<br>
+- 동작감지센서:    라즈베리파이에 GPIO Pin으로 연결되어 있고 전원은 UNO에서 공급한다. 동작 감지가 트리거되면 WEB CAM에서 녹화 로직이 작동한다.<br>
+- UNO R3:         동작감지센서에 전원을 공급한다.<br>
+
     </div>
+
 </details>
 
 ### 3-5. 웹 페이지 설계
