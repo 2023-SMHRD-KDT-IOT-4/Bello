@@ -229,7 +229,7 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
 - 라즈베리파이에서 Python-Flask서버를 통해 설정값을 DB에 저장한다.<br>
 
-- 볼륨 바 조정를 조정하여 변경하기를 누르면 해당 정수값이 DB에 UPDATE되고 LCD페이지에 해당 값을 SELECT하여 Pyaudio라이브러리를 통해 라즈베리파이에 반영된다.<br>
+- 볼륨 바 조정를 조정하여 변경하기를 누르면 해당 정수값이 DB에 UPDATE되고 LCD페이지에 해당 값을 SELECT하여 alsaaudio라이브러리를 통해 라즈베리파이에 반영된다.<br>
 
 - 벨소리를 지정하여 변경하기를 누르면 해당 음악파일의 경로가 DB에 UPDATE되고 LCD페이지에 해당 파일을 SELECT하여 반영된다.<br>
 
