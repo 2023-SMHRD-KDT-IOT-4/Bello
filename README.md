@@ -35,7 +35,6 @@
   - Flask
   - Picamera2
   - OpenCV
-  - RPi.GPIO
 
 </br>
 
