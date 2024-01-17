@@ -197,7 +197,25 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 </details><br><br><br>
 
 ### 5.3. 스트리밍 기능
-![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/8b299de4-421a-4c62-a89c-07b582f6bed2)
+
+<details>
+  <summary><b>스트리밍 설명 펼치기</b></summary>
+
+- Main페이지에서 STREAMING버튼을 클릭하면 Streaming page로 redirect된다.<br>
+- Python-Flask, SocketIO에서 웹 요청을 처리하고 WebSocket연결을 관리한다.<br>
+- AudioStream Class:
+    - PyAudio를 사용하여 오디오 입력을 캡쳐한다.
+    - read_audio Method는 계속해서 오디오 데이터를 생성한다.
+- StreamingOutput Class:
+    - io.BufferedIOBase를 상속받아 버퍼에 프레임을 씌운다.
+- StreamingHandler Class:
+    - server.BaseHTTPRequestHandler를 상속받아 주소를 재사용하고 스레드를 데몬으로 실행한다.
+- 메인 로직:
+    - __main__ 블록에서 Picamera2를 초기화하고 스트리밍을 위한 설정을 구성한다.
+    - 서버를 시작하고, 오디오 스트리밍을 위한 스레드를 시작하고, Flask-SocketIO를 사용하여 웹서버를 실행한다.
+    - 마지막으로, 프로그램이 종료될때, 리소스를 정리하고 스레드를 종료한다.
+    
+</details>
 
 ### 5.4. 설정 기능
 ![설정](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/eed80171-fd8f-462c-b5f4-a846acde7b3f)
