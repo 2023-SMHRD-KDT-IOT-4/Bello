@@ -198,6 +198,9 @@ https://github.com/2023-SMHRD-KDT-IOT-4/Bello/blob/e1da0f188c11406dee765539d6427
 
 ### 5.3. 스트리밍 기능
 
+![스트리밍](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/6cb6870c-be06-4d98-92a0-d6fc493f95d9)
+
+
 <details>
   <summary><b>스트리밍 설명 펼치기</b></summary>
 
