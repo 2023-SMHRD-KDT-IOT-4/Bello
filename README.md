@@ -1,7 +1,8 @@
 # Project : Bello
 <br>
-> 스마트그리드기반 IoT융합 SW전문가 과정 핵심프로젝트 <br>
-> IoT기반 스마트 도어벨 서비스 : Bello
+
+![벨로소개서](https://github.com/2023-SMHRD-KDT-IOT-4/Bello/assets/152847551/c7813fda-e3de-4f08-b43c-4ad0359bf5cc)
+
 
 </br>
 
