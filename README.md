@@ -9,7 +9,7 @@
 ## 1. 제작 기간 & 참여 인원
 - 2024년 01월 04일 ~ 01월 15일
 - 팀 프로젝트(5명)
-- 팀장: 이승재(PM, Rasberrypi, Python-Flask)
+- 팀장: 이승재(PM, Rasberrypi, Python-Flask : RaspberryPi 스트리밍 기능 구현, 웹 서비스 설정페이지 기능 구현, 동잠감지-녹화 기능 구현)
 - 팀원: 유민지(Frontend : JavaScript, HTML, CSS)
 - 팀원:<a href="https://github.com/lamruth/portfolio">김현정</a><br>(Frontend, JavaScript,HTML,CSS : 로그인 페이지 구현,비디오 페이지 기획(게시판형식,모달),<br> 웹페이지 템플릿 제작, 프로젝트 소개서 및 ppt 기획 및 작성)
 - 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br>(DB설계, 테이블 생성 및 관리, 트리거 설정, DB관련 문서 작성<br>
