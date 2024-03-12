@@ -10,7 +10,7 @@
 - 2024년 01월 04일 ~ 01월 15일
 - 팀 프로젝트(5명)
 - 팀장: <a href="https://github.com/tmdwo10">이승재</a><br>(PM, Rasberrypi, Python-Flask : RaspberryPi 스트리밍 기능 구현, 웹 서비스 설정페이지 기능 구현, 동잠감지-녹화 기능 구현)
-- 팀원: 유민지(Frontend : JavaScript, HTML, CSS)
+- 팀원: <a href="https://github.com/MinJiYu/portfolio.git">유민지</a><br>(Frontend : JavaScript, HTML, CSS : 회원가입 페이지 구현, 메인페이지 구현, 설정 페이지 구현, 메세지 페이지 구현, ppt 작성)
 - 팀원:<a href="https://github.com/lamruth/portfolio">김현정</a><br>(Frontend, JavaScript,HTML,CSS : 로그인 페이지 구현,비디오 페이지 기획(게시판형식,모달),<br> 웹페이지 템플릿 제작, 프로젝트 소개서 및 ppt 기획 및 작성)
 - 팀원: <a href="https://github.com/1SSoll2/HSKimPF">김한솔</a><br>(DB설계, 테이블 생성 및 관리, 트리거 설정, DB관련 문서 작성<br>
 회원 관리, WebSoket 연결, 서버 운용)
