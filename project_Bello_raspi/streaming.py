@@ -135,7 +135,7 @@ if __name__ == '__main__':
     picam2.start_recording(JpegEncoder(), FileOutput(output))
 
     try:
-        address = ('172.30.1.6', 8000)
+        address = ('127.0.0.1', 8000)
         server = StreamingServer(address, StreamingHandler)
 
  
@@ -145,7 +145,7 @@ if __name__ == '__main__':
         audio_thread = threading.Thread(target=server.serve_forever)
         audio_thread.start()
 
-        socketio.run(app, host='172.30.1.6', port=8001, use_reloader=False, debug=False)
+        socketio.run(app, host='127.0.01', port=8001, use_reloader=False, debug=False)
 
     finally:
         picam2.stop_recording()
