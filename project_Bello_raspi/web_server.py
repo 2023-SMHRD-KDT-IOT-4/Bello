@@ -13,11 +13,11 @@ CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 app.secret_key = 'bello'
-app.config['MYSQL_HOST'] = 'project-db-campus.smhrd.com'
-app.config['MYSQL_PORT'] = 3307
-app.config['MYSQL_USER'] = 'campus_23K_SG4_hack_3'
-app.config['MYSQL_PASSWORD'] = 'smhrd3'
-app.config['MYSQL_DB'] = 'campus_23K_SG4_hack_3'
+app.config['MYSQL_HOST'] = '****'
+app.config['MYSQL_PORT'] = 0000
+app.config['MYSQL_USER'] = '****'
+app.config['MYSQL_PASSWORD'] = '****'
+app.config['MYSQL_DB'] = '****'
 
 mysql = MySQL(app)
 audio = alsaaudio.Mixer()
